@@ -14,12 +14,47 @@ const HomeContent = () => {
         </p>
 
         {/* image container */}
-        <div className=" hidden w-60 h-80 rounded-lg overflow-hidden md:block">
-          <img
-            src={"https://placehold.co/400"}
-            alt="Placeholder"
-            className="w-full h-full object-cover"
-          />
+
+        <div className="flex space-x-2 items-center">
+          <div className=" hidden w-60 h-80 rounded-lg overflow-hidden md:block hover:h-[24rem] transition-all duration-100 ease-linear">
+            <img
+              src={"https://placehold.co/400"}
+              alt="Placeholder"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className=" hidden w-60 h-80 rounded-lg overflow-hidden md:block hover:h-[24rem] transition-all duration-100 ease-linear">
+            <img
+              src={"https://placehold.co/400"}
+              alt="Placeholder"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* middle one */}
+          <div className=" hidden w-60 h-80 rounded-lg overflow-hidden md:block hover:h-[24rem] transition-all duration-100 ease-linear">
+            <img
+              src={"https://placehold.co/400"}
+              alt="Placeholder"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className=" hidden w-60 h-80 rounded-lg overflow-hidden md:block hover:h-[24rem] transition-all duration-100 ease-linear">
+            <img
+              src={"https://placehold.co/400"}
+              alt="Placeholder"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className=" hidden w-60 h-80 rounded-lg overflow-hidden md:block hover:h-[24rem] transition-all duration-100 ease-linear">
+            <img
+              src={"https://placehold.co/400"}
+              alt="Placeholder"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>
