@@ -51,11 +51,8 @@ export function MyCard({
       <CardContent className="grid gap-4">
         <div>
           {contentText.map((item, index) => (
-            <div
-              key={index}
-              className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
-            >
-              <div className="bg-red-500 h-8 flex  items-center justify-between w-80">
+            <div key={index} className="mb-4 pb-4 last:mb-0 last:pb-0">
+              <div className="h-8 flex items-center justify-between w-full px-4">
                 <p className="font-medium text-sm">{item.title}</p>
                 <p className="text-sm text-muted-foreground">
                   {item.description}
