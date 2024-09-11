@@ -55,8 +55,8 @@ export function MyCard({
               key={index}
               className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
             >
-              <div className="space-y-1  flex items-center justify-between w-80 px-4">
-                <p className="text-sm font-medium leading-none">{item.title}</p>
+              <div className="bg-red-500 h-8 flex  items-center justify-between w-80">
+                <p className="font-medium text-sm">{item.title}</p>
                 <p className="text-sm text-muted-foreground">
                   {item.description}
                 </p>
@@ -66,7 +66,11 @@ export function MyCard({
         </div>
       </CardContent>
       <CardFooter>
-        <Button className={`w-full h-12 text-lg bg-[#7C4BD2] hover:bg-[#5f2db5]`}>Details</Button>
+        <Button
+          className={`w-full h-12 text-lg bg-[#7C4BD2] hover:bg-[#5f2db5]`}
+        >
+          Details
+        </Button>
       </CardFooter>
     </Card>
   );

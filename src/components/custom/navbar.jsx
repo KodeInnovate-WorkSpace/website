@@ -14,11 +14,8 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             {/* Logo */}
-            <a
-              href="/"
-              className={`text-2xl font-bold text-[${primaryColor}]`}
-            >
-              MyLogo
+            <a href="/" className={`text-2xl font-bold text-[#7C4BD2]`}>
+              LOGO
             </a>
           </div>
           <div className="hidden md:flex space-x-8 items-center">
