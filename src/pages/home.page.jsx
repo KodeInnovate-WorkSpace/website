@@ -3,6 +3,7 @@ import dummyData from "../constants/data.json";
 import Navbar from "@/components/custom/navbar";
 import { MyCard } from "@/components/custom/card";
 import HomeContent from "@/components/custom/home_content";
+import Footer from "@/components/custom/footer";
 
 const HomePage = () => {
   return (
@@ -19,7 +20,7 @@ const HomePage = () => {
             <h1>New Construction</h1>
           </div>
 
-          <div className="flex flex-wrap justify-between gap-4">
+          <div className="flex flex-wrap justify-start gap-x-6 gap-y-6">
             {dummyData.map((property, index) => (
               <MyCard
                 key={index}
@@ -34,6 +35,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

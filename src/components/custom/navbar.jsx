@@ -1,5 +1,5 @@
-import { primaryColor } from "@/constants/colors";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,27 +14,28 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             {/* Logo */}
-            <a href="/" className={`text-2xl font-bold text-[#7C4BD2]`}>
-              LOGO
-            </a>
+
+            <Link to={"/"}>
+              <h1 className={`text-2xl font-bold text-mainColor`}>Logo</h1>
+            </Link>
           </div>
           <div className="hidden md:flex space-x-8 items-center">
             {/* Navigation Links */}
-            <a href="#home" className="text-gray-600 hover:text-gray-900">
+            <Link to={"/"} className="text-gray-600 hover:text-gray-900">
               Home
-            </a>
-            <a href="#about" className="text-gray-600 hover:text-gray-900">
+            </Link>
+            <Link to={"/about"} className="text-gray-600 hover:text-gray-900">
               About
-            </a>
-            <a href="#properties" className="text-gray-600 hover:text-gray-900">
+            </Link>
+            <Link to={"/"} className="text-gray-600 hover:text-gray-900">
               Properties
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-900">
+            </Link>
+            <Link to={"/"} className="text-gray-600 hover:text-gray-900">
               Contact
-            </a>
-            <a href="#careers" className="text-gray-600 hover:text-gray-900">
+            </Link>
+            <Link to={"/"} className="text-gray-600 hover:text-gray-900">
               Careers
-            </a>
+            </Link>
           </div>
           {/* Hamburger Menu */}
           <div className="flex md:hidden items-center">
@@ -68,33 +69,24 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#home" className="block text-gray-600 hover:text-gray-900">
+            <Link to={"/"} className="block text-gray-600 hover:text-gray-900">
               Home
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to={"/about"}
               className="block text-gray-600 hover:text-gray-900"
             >
               About
-            </a>
-            <a
-              href="#properties"
-              className="block text-gray-600 hover:text-gray-900"
-            >
+            </Link>
+            <Link className="block text-gray-600 hover:text-gray-900">
               Properties
-            </a>
-            <a
-              href="#contact"
-              className="block text-gray-600 hover:text-gray-900"
-            >
+            </Link>
+            <Link className="block text-gray-600 hover:text-gray-900">
               Contact
-            </a>
-            <a
-              href="#careers"
-              className="block text-gray-600 hover:text-gray-900"
-            >
+            </Link>
+            <Link className="block text-gray-600 hover:text-gray-900">
               Careers
-            </a>
+            </Link>
           </div>
         </div>
       )}

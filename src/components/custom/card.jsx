@@ -35,24 +35,33 @@ export function MyCard({
   ];
 
   return (
-    <Card className={cn("w-[380px]", className)} {...props}>
+    <Card className={cn("w-[300px]", className)} {...props}>
       <CardHeader>
+        {/* property image */}
+        <div className=" w-full h-48 rounded-lg overflow-hidden cursor-pointer">
+          <img
+            src={"https://placehold.co/400"}
+            alt="Placeholder"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <CardTitle>
-          <div className="flex justify-between">
+          <div className="flex justify-between mt-4 text-lg">
             {name}
             <p>₹{price}/-</p>
           </div>
         </CardTitle>
 
         <CardDescription>
-          <p>{location}</p>
+          <p className="-mb-9">{location}</p>
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         <div>
           {contentText.map((item, index) => (
-            <div key={index} className="mb-4 pb-4 last:mb-0 last:pb-0">
-              <div className="h-8 flex items-center justify-between w-full px-4">
+            <div key={index} className="last:mb-0 last:pb-0">
+              <div className="h-8 flex items-center justify-between w-full">
                 <p className="font-medium text-sm">{item.title}</p>
                 <p className="text-sm text-muted-foreground">
                   {item.description}
@@ -64,7 +73,7 @@ export function MyCard({
       </CardContent>
       <CardFooter>
         <Button
-          className={`w-full h-12 text-lg bg-[#7C4BD2] hover:bg-[#5f2db5]`}
+          className={`w-full h-12 text-lg bg-mainColor hover:bg-secondColor`}
         >
           Details
         </Button>
