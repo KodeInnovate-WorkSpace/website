@@ -8,7 +8,7 @@ const AboutPage = () => {
       <Navbar />
       <div className="pt-[4rem]">
         {/* intro section */}
-        <section className="flex flex-col md:flex-row items-start justify-between p-6 md:p-12 h-screen md:h-auto mb-32 lg:mb-0">
+        <section className="flex flex-col md:flex-row items-start justify-between p-6 md:p-12 h-screen md:h-auto mb-8 lg:mb-0">
           {/* Left Side - Text */}
           <div className="md:w-1/2 w-full mb-4 md:mb-0">
             <h1 className="text-3xl md:text-5xl font-bold mb-4">
@@ -36,8 +36,8 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* mission section  */}
-        <section className="p-6 md:p-12 bg-white">
+        {/* vission & mission section  */}
+        <section className="px-6 md:p-12 bg-white">
           {/* Title in the Middle */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">Vision & Mission</h2>
@@ -53,10 +53,41 @@ const AboutPage = () => {
             {/* Right Section */}
             <div className="md:w-1/2 w-full flex flex-col lg:flex-row lg:space-x-8 space-y-4 lg:space-y-0">
               {/* First Rectangle */}
-              <div className="bg-green-300 h-[28rem] w-full"></div>
+              <div className="bg-green-300 h-[28rem] w-full flex flex-col items-center p-6">
+                {/* image  */}
+                <div className="bg-red-300 w-48 h-52 "></div>
+                {/* text */}
+
+                <div className="my-2">
+                  <h2 className="text-center my-2 font-bold text-2xl">
+                    Our Mission
+                  </h2>
+                  <p className="text-justify font-semibold">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iusto tenetur illo nihil facilis dolorem blanditiis eos
+                    harum fugit suscipit voluptate!
+                  </p>
+                </div>
+              </div>
 
               {/* Second Rectangle */}
-              <div className="bg-yellow-300 h-[28rem] w-full"></div>
+              <div className="bg-yellow-300 h-[28rem] w-full flex flex-col items-center p-6">
+                {/* image  */}
+                <div className="bg-green-300 w-48 h-52 "></div>
+
+                {/* text */}
+
+                <div className="my-2">
+                  <h2 className="text-center my-2 font-bold text-2xl">
+                    Our Vision
+                  </h2>
+                  <p className="text-justify font-semibold">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iusto tenetur illo nihil facilis dolorem blanditiis eos
+                    harum fugit suscipit voluptate!
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

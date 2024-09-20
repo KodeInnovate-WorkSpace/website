@@ -16,7 +16,9 @@ const Navbar = () => {
             {/* Logo */}
 
             <Link to={"/"}>
-              <h1 className={`text-2xl font-bold text-mainColor`}>Logo</h1>
+              <h1 className={`text-2xl font-bold text-mainColor`}>
+                Deal Done Broker
+              </h1>
             </Link>
           </div>
           <div className="hidden md:flex space-x-8 items-center">
@@ -27,13 +29,13 @@ const Navbar = () => {
             <Link to={"/about"} className="text-gray-600 hover:text-gray-900">
               About
             </Link>
-            <Link to={"/"} className="text-gray-600 hover:text-gray-900">
+            <Link to={"/properties"} className="text-gray-600 hover:text-gray-900">
               Properties
             </Link>
-            <Link to={"/"} className="text-gray-600 hover:text-gray-900">
+            <Link to={"/contact"} className="text-gray-600 hover:text-gray-900">
               Contact
             </Link>
-            <Link to={"/"} className="text-gray-600 hover:text-gray-900">
+            <Link to={"/careers"} className="text-gray-600 hover:text-gray-900">
               Careers
             </Link>
           </div>
@@ -78,13 +80,19 @@ const Navbar = () => {
             >
               About
             </Link>
-            <Link className="block text-gray-600 hover:text-gray-900">
+            <Link to={"/properties"} className="block text-gray-600 hover:text-gray-900">
               Properties
             </Link>
-            <Link className="block text-gray-600 hover:text-gray-900">
+            <Link
+              to={"/contact"}
+              className="block text-gray-600 hover:text-gray-900"
+            >
               Contact
             </Link>
-            <Link className="block text-gray-600 hover:text-gray-900">
+            <Link
+              to={"/careers"}
+              className="block text-gray-600 hover:text-gray-900"
+            >
               Careers
             </Link>
           </div>
