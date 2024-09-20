@@ -1,6 +1,5 @@
 import Footer from "@/components/custom/footer";
 import Navbar from "@/components/custom/navbar";
-import { Button } from "@/components/ui/button";
 import React from "react";
 
 const CareerPage = () => {
@@ -17,7 +16,9 @@ const CareerPage = () => {
           <div className="p-6 md:p-12">
             {/* Title - Available Jobs */}
             <div className="text-center my-8">
-              <h2 className="text-3xl md:text-4xl font-bold">Available Jobs</h2>
+              <h2 className="text-4xl text-mainColor md:text-4xl font-bold">
+                Available Jobs
+              </h2>
             </div>
 
             {/* Jobs List */}
@@ -84,9 +85,8 @@ const CareerPage = () => {
             </div>
           </div>
         </section>
-
       </div>
-        <Footer />
+      <Footer />
     </>
   );
 };

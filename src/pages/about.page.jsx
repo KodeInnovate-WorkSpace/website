@@ -11,7 +11,7 @@ const AboutPage = () => {
         <section className="flex flex-col md:flex-row items-start justify-between p-6 md:p-12 h-screen md:h-auto mb-8 lg:mb-0">
           {/* Left Side - Text */}
           <div className="md:w-1/2 w-full mb-4 md:mb-0">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            <h1 className="text-mainColor text-3xl md:text-5xl font-bold mb-4">
               This is Deal Done Broker
             </h1>
             <p className="text-gray-600 text-lg text-justify">
@@ -40,7 +40,7 @@ const AboutPage = () => {
         <section className="px-6 md:p-12 bg-white">
           {/* Title in the Middle */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Vision & Mission</h2>
+            <h1 className="text-3xl text-mainColor md:text-5xl font-bold">Vision & Mission</h1>
           </div>
 
           {/* Main Content Area */}
