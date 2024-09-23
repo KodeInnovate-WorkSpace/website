@@ -3,6 +3,8 @@ import Footer from "@/components/custom/footer";
 import Navbar from "@/components/custom/navbar";
 import { Label } from "@/components/ui/label";
 import React from "react";
+import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { SlSocialYoutube } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
 const ContactPage = () => {
@@ -28,7 +30,7 @@ const ContactPage = () => {
           </div>
 
           {/* Right: Contact Details */}
-          <div className="flex-1 p-6 space-y-6 flex justify-start">
+          <div className="flex-1 p-6 space-y-6 flex justify-start bg-mainColor text-white rounded-3xl">
             <div className="w-full max-w-md space-y-6">
               {/* Call Section */}
               <div>
@@ -48,18 +50,26 @@ const ContactPage = () => {
               <div>
                 <h1 className="text-2xl font-bold">Socials</h1>
                 <Label>Follow us on social media</Label>
-                <ul>
-                  <li>
-                    <Link>Twitter</Link>
+                <ul className="flex space-x-4 mt-2">
+                  <li className="transform transition-transform duration-300 hover:-translate-y-1">
+                    <Link>
+                      <FaXTwitter className="text-2xl" />
+                    </Link>
                   </li>
-                  <li>
-                    <Link>Youtube</Link>
+                  <li className="transform transition-transform duration-300 hover:-translate-y-1">
+                    <Link>
+                      <SlSocialYoutube className="text-2xl" />
+                    </Link>
                   </li>
-                  <li>
-                    <Link>Instagram</Link>
+                  <li className="transform transition-transform duration-300 hover:-translate-y-1">
+                    <Link>
+                      <FaInstagram className="text-2xl" />
+                    </Link>
                   </li>
-                  <li>
-                    <Link>Facebook</Link>
+                  <li className="transform transition-transform duration-300 hover:-translate-y-1">
+                    <Link>
+                      <FaFacebook className="text-2xl" />
+                    </Link>
                   </li>
                 </ul>
               </div>

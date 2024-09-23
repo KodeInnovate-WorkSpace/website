@@ -9,8 +9,8 @@ const CareerPage = () => {
       <div className="pt-[4rem]">
         <section>
           {/* Top Image Div */}
-          <div className="w-full h-1/3 bg-cover bg-center bg-slate-500 hidden lg:block">
-            <img src="https://via.placeholder.com/1200x400" alt="Placeholder" />
+          <div className="w-full h-1/3 bg-cover bg-center hidden lg:block">
+            <img src="images/careers.jpg" alt="Placeholder" className="h-80 w-full object-cover"/>
           </div>
 
           <div className="p-6 md:p-12">

@@ -1,6 +1,9 @@
 import Footer from "@/components/custom/footer";
 import Navbar from "@/components/custom/navbar";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboutPage = () => {
   return (
@@ -22,47 +25,67 @@ const AboutPage = () => {
               dapibus libero. Proin non consequat libero. Suspendisse potenti.
               Aenean id erat vel ligula viverra vehicula.
             </p>
+
+            <Button className="mt-20 bg-mainColor w-64 h-12 hover:bg-secondColor text-xl flex items-center justify-center group">
+              <Link to={"/contact"}>Contact Us</Link>
+              <div className="ml-5 mt-1 transform transition-transform duration-300 group-hover:translate-x-2">
+                <FaArrowRightLong />
+              </div>
+            </Button>
           </div>
 
           {/* Right Side - Image Container */}
           <div className="md:w-1/2 w-full flex justify-center md:justify-end items-center">
-            <div className="lg:w-[30rem] lg:h-[28rem] w-full bg-gray-300 rounded-md">
+            <div className="lg:w-[30rem] lg:h-[28rem] w-full  rounded-md">
               <img
-                src="https://via.placeholder.com/300"
+                src="images/team.png"
                 alt="Placeholder"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-contain rounded-lg"
               />
             </div>
           </div>
         </section>
 
         {/* vission & mission section  */}
+
         <section className="px-6 md:p-12 bg-white">
           {/* Title in the Middle */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl text-mainColor md:text-5xl font-bold">Vision & Mission</h1>
+            <h1 className="text-3xl text-mainColor md:text-5xl font-bold">
+              Vision & Mission
+            </h1>
           </div>
 
           {/* Main Content Area */}
           <div className="flex flex-col md:flex-row items-start justify-between">
             {/* Left Section */}
-            <div className="md:w-1/2 w-full bg-blue-300 h-64 md:h-auto mb-6 md:mb-0">
-              {/* Placeholder for future content on the left */}
+            <div className=" w-full h-96 hidden justify-evenly items-center lg:flex ">
+              <img
+                src="images/trophy.png"
+                alt="Placeholder"
+                className="w-42 h-full object-contain rounded-lg "
+              />
             </div>
 
             {/* Right Section */}
             <div className="md:w-1/2 w-full flex flex-col lg:flex-row lg:space-x-8 space-y-4 lg:space-y-0">
               {/* First Rectangle */}
-              <div className="bg-green-300 h-[28rem] w-full flex flex-col items-center p-6">
+              <div className="h-[28rem] w-full flex flex-col items-center p-6  rounded-tr-[2rem]">
                 {/* image  */}
-                <div className="bg-red-300 w-48 h-52 "></div>
+                <div className=" w-48 h-52 ">
+                  <img
+                    src="images/mission.png"
+                    alt=""
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
                 {/* text */}
 
                 <div className="my-2">
-                  <h2 className="text-center my-2 font-bold text-2xl">
+                  <h2 className="text-left my-2 font-bold text-2xl">
                     Our Mission
                   </h2>
-                  <p className="text-justify font-semibold">
+                  <p className="text-left font-semibold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Iusto tenetur illo nihil facilis dolorem blanditiis eos
                     harum fugit suscipit voluptate!
@@ -71,17 +94,23 @@ const AboutPage = () => {
               </div>
 
               {/* Second Rectangle */}
-              <div className="bg-yellow-300 h-[28rem] w-full flex flex-col items-center p-6">
+              <div className="h-[28rem] w-full flex flex-col items-center p-6 rounded-tr-[2rem]">
                 {/* image  */}
-                <div className="bg-green-300 w-48 h-52 "></div>
+                <div className=" w-48 h-52 ">
+                  <img
+                    src="images/vision.png"
+                    alt=""
+                    className="w-full h-full object-contain rounded-lg"
+                  />
+                </div>
 
                 {/* text */}
 
                 <div className="my-2">
-                  <h2 className="text-center my-2 font-bold text-2xl">
+                  <h2 className="text-left my-2 font-bold text-2xl">
                     Our Vision
                   </h2>
-                  <p className="text-justify font-semibold">
+                  <p className="text-left font-semibold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Iusto tenetur illo nihil facilis dolorem blanditiis eos
                     harum fugit suscipit voluptate!

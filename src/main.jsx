@@ -7,6 +7,7 @@ import AboutPage from "./pages/about.page";
 import CareerPage from "./pages/career.page";
 import ContactPage from "./pages/contact.page";
 import PropertiesPage from "./pages/properties.page";
+import CustomCursor from "./components/custom/vision_cursor";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <CustomCursor />
     <RouterProvider router={router} />
   </StrictMode>
 );

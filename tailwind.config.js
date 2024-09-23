@@ -12,6 +12,7 @@ export default {
       colors: {
         mainColor: '#7C4BD2',
         secondColor: '#5f2db5',
+        lightColor: "rgba(124,75,210, 0.2)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -53,6 +54,9 @@ export default {
           5: "hsl(var(--chart-5))",
         },
       },
+      cursor:{
+        'vision':'url(public/images/trophy.png), auto'
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -47,7 +47,7 @@ const ContactForm = () => {
 
             {/* Submit Button */}
             <div>
-              <Button type="submit" className="bg-mainColor w-full">
+              <Button type="submit" className="bg-mainColor w-full hover:bg-secondColor">
                 Send Message
               </Button>
             </div>
