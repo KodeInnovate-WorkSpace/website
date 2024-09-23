@@ -6,6 +6,7 @@ import HomeContent from "@/components/custom/home_content";
 import Footer from "@/components/custom/footer";
 
 const HomePage = () => {
+
   return (
     <div>
       <Navbar />

@@ -1,11 +1,15 @@
 import Footer from "@/components/custom/footer";
 import Navbar from "@/components/custom/navbar";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
 import React from "react";
 import { Link } from "react-router-dom";
+import { useCursor } from "@/context/cursor.context";
 
 const AboutPage = () => {
+  const { mouseEnter, mouseLeave } = useCursor();
+
   return (
     <>
       <Navbar />
@@ -14,24 +18,44 @@ const AboutPage = () => {
         <section className="flex flex-col md:flex-row items-start justify-between p-6 md:p-12 h-screen md:h-auto mb-8 lg:mb-0">
           {/* Left Side - Text */}
           <div className="md:w-1/2 w-full mb-4 md:mb-0">
-            <h1 className="text-mainColor text-3xl md:text-5xl font-bold mb-4">
+            <motion.h1
+              className="text-mainColor text-3xl md:text-5xl font-bold mb-4"
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
               This is Deal Done Broker
-            </h1>
-            <p className="text-gray-600 text-lg text-justify">
+            </motion.h1>
+            <motion.p
+              className="text-gray-600 text-lg text-justify"
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Vestibulum eget arcu justo. Duis scelerisque elit et arcu
               efficitur, et pretium tortor facilisis. Cras non orci at nisl
               tempus fermentum. Sed sit amet mi interdum, gravida justo nec,
               dapibus libero. Proin non consequat libero. Suspendisse potenti.
               Aenean id erat vel ligula viverra vehicula.
-            </p>
-
-            <Button className="mt-20 bg-mainColor w-64 h-12 hover:bg-secondColor text-xl flex items-center justify-center group">
-              <Link to={"/contact"}>Contact Us</Link>
-              <div className="ml-5 mt-1 transform transition-transform duration-300 group-hover:translate-x-2">
-                <FaArrowRightLong />
-              </div>
-            </Button>
+            </motion.p>
+            <Link to={"/contact"}>
+              <motion.div
+                className="mt-20 bg-mainColor w-64 h-12 hover:bg-secondColor text-xl flex items-center justify-center group text-white rounded-xl"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact Us
+                <motion.div
+                  className="ml-5 mt-1"
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 10 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <FaArrowRightLong />
+                </motion.div>
+              </motion.div>
+            </Link>
           </div>
 
           {/* Right Side - Image Container */}
@@ -48,7 +72,7 @@ const AboutPage = () => {
 
         {/* vission & mission section  */}
 
-        <section className="px-6 md:p-12 bg-white">
+        <section className="mt-24 px-6 md:p-12 bg-white">
           {/* Title in the Middle */}
           <div className="text-center mb-12">
             <h1 className="text-3xl text-mainColor md:text-5xl font-bold">

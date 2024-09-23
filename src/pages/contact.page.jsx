@@ -2,20 +2,33 @@ import ContactForm from "@/components/custom/contact_form";
 import Footer from "@/components/custom/footer";
 import Navbar from "@/components/custom/navbar";
 import { Label } from "@/components/ui/label";
+import { useCursor } from "@/context/cursor.context";
 import React from "react";
 import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { SlSocialYoutube } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
 const ContactPage = () => {
+  const { mouseEnter, mouseLeave, blendMouseEnter } = useCursor();
+
   return (
     <>
       <Navbar />
       <div className="pt-[6rem] px-4 md:px-8">
         {/* Heading Section */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold mb-2">Contact Our Team</h1>
-          <p className="text-lg">
+          <h1
+            onMouseEnter={blendMouseEnter}
+            onMouseLeave={mouseLeave}
+            className="text-3xl font-bold mb-2"
+          >
+            Contact Our Team
+          </h1>
+          <p
+            className="text-lg"
+            onMouseEnter={blendMouseEnter}
+            onMouseLeave={mouseLeave}
+          >
             Got any questions about our service? We're here to help.
           </p>
         </div>
@@ -30,7 +43,7 @@ const ContactPage = () => {
           </div>
 
           {/* Right: Contact Details */}
-          <div className="flex-1 p-6 space-y-6 flex justify-start bg-mainColor text-white rounded-3xl">
+          <div onMouseEnter={blendMouseEnter} onMouseLeave={mouseLeave} className="flex-1 p-6 space-y-6 flex justify-start bg-mainColor text-white rounded-3xl">
             <div className="w-full max-w-md space-y-6">
               {/* Call Section */}
               <div>
@@ -40,7 +53,7 @@ const ContactPage = () => {
               </div>
 
               {/* Address Section */}
-              <div>
+              <div >
                 <h1 className="text-2xl font-bold">Visit Us</h1>
                 <Label>Chat to us in person</Label>
                 <h2>Kalyan Phata Near HP Petrol Pump</h2>
