@@ -21,11 +21,11 @@ const HomeContent = () => {
         {/* image container */}
 
         <div className="flex space-x-2 items-center overflow-x-auto md:overflow-hidden">
-          <ImageContainer imgSrc={"src/assets/sample1.jpg"} />
-          <ImageContainer imgSrc={"src/assets/sample2.jpg"} />
-          <ImageContainer imgSrc={"src/assets/sample3.jpg"} />
-          <ImageContainer imgSrc={"src/assets/sample4.jpg"} />
-          <ImageContainer imgSrc={"src/assets/sample5.jpg"} />
+          <ImageContainer imgSrc={"images/sample1.jpg"} />
+          <ImageContainer imgSrc={"images/sample2.jpg"} />
+          <ImageContainer imgSrc={"images/sample3.jpg"} />
+          <ImageContainer imgSrc={"images/sample4.jpg"} />
+          <ImageContainer imgSrc={"images/sample5.jpg"} />
         </div>
       </div>
     </div>

@@ -37,7 +37,7 @@ const Footer = () => {
           <ul className="space-y-4">
             <li className="flex items-center">
               <img
-                src="src\assets\person.svg"
+                src="images/person.svg"
                 alt="Agent 1"
                 className="w-8 h-8 rounded-full mr-2"
               />
@@ -45,7 +45,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center">
               <img
-                src="src\assets\person.svg"
+                src="images/person.svg"
                 alt="Agent 2"
                 className="w-8 h-8 rounded-full mr-2"
               />
@@ -53,7 +53,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center">
               <img
-                src="src\assets\person.svg"
+                src="images/person.svg"
                 alt="Agent 3"
                 className="w-8 h-8 rounded-full mr-2"
               />
@@ -61,7 +61,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center">
               <img
-                src="src\assets\person.svg"
+                src="images/person.svg"
                 alt="Agent 4"
                 className="w-8 h-8 rounded-full mr-2"
               />
