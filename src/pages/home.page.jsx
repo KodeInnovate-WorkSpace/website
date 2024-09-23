@@ -11,7 +11,9 @@ const HomePage = () => {
       <Navbar />
 
       <div className="pt-[4rem]">
-        <HomeContent />
+        <div className="px-2 lg:px-10 mt-2">
+          <HomeContent />
+        </div>
 
         <div className="px-6">
           {/* title */}
@@ -24,7 +26,7 @@ const HomePage = () => {
             {dummyData.map((property, index) => (
               <MyCard
                 key={index}
-                id={index +1}
+                id={index + 1}
                 price={property.price}
                 location={property.location}
                 name={property.name}

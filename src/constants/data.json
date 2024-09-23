@@ -1,102 +1,82 @@
 [
-    {
-        "id": 1,
-        "img": "",
-        "name": "Raheja Imperia",
-        "price": "4.90 Cr",
-        "location": "Worli",
-        "bathrooms": 5,
-        "bedrooms": 4,
-        "size": "2300 sqft"
-    },
-    {
-        "id": 2,
-        "img": "",
-        "name": "Oberoi Skyheights",
-        "price": "6.50 Cr",
-        "location": "Bandra",
-        "bathrooms": 6,
-        "bedrooms": 5,
-        "size": "3500 sqft"
-    },
-    {
-        "id": 3,
-        "img": "",
-        "name": "Pallazio Towers",
-        "price": "3.80 Cr",
-        "location": "Andheri",
-        "bathrooms": 4,
-        "bedrooms": 3,
-        "size": "2000 sqft"
-    },
-    {
-        "id": 4,
-        "img": "",
-        "name": "One Avighna Park",
-        "price": "8.20 Cr",
-        "location": "Juhu",
-        "bathrooms": 7,
-        "bedrooms": 6,
-        "size": "4000 sqft"
-    },
-    {
-        "id": 5,
-        "img": "",
-        "name": "Imperial Heights",
-        "price": "5.50 Cr",
-        "location": "Powai",
-        "bathrooms": 5,
-        "bedrooms": 4,
-        "size": "2800 sqft"
-    },
-    {
-        "id": 6,
-        "img": "",
-        "name": "Lodha New Cuffe Parade",
-        "price": "7.00 Cr",
-        "location": "Cuffe Parade",
-        "bathrooms": 6,
-        "bedrooms": 5,
-        "size": "3200 sqft"
-    },
-    {
-        "id": 7,
-        "img": "",
-        "name": "Raheja Classique",
-        "price": "4.20 Cr",
-        "location": "Malad",
-        "bathrooms": 4,
-        "bedrooms": 3,
-        "size": "2200 sqft"
-    },
-    {
-        "id": 8,
-        "img": "",
-        "name": "Piramal Tower",
-        "price": "6.80 Cr",
-        "location": "Kurla",
-        "bathrooms": 6,
-        "bedrooms": 5,
-        "size": "3400 sqft"
-    },
-    {
-        "id": 9,
-        "img": "",
-        "name": "Godrej Platinum",
-        "price": "5.00 Cr",
-        "location": "Vile Parle",
-        "bathrooms": 5,
-        "bedrooms": 4,
-        "size": "2600 sqft"
-    },
-    {
-        "id": 10,
-        "img": "",
-        "name": "Hiranandani Park",
-        "price": "3.50 Cr",
-        "location": "Powai",
-        "bathrooms": 4,
-        "bedrooms": 3,
-        "size": "1800 sqft"
-    }
+  {
+    "id": 1,
+    "img": "",
+    "name": "Raheja Imperia",
+    "price": "4.90 Cr",
+    "location": "Worli",
+    "bathrooms": 5,
+    "bedrooms": 4,
+    "size": "2300 sqft"
+  },
+  {
+    "id": 2,
+    "img": "",
+    "name": "Oberoi Skyheights",
+    "price": "6.50 Cr",
+    "location": "Bandra",
+    "bathrooms": 6,
+    "bedrooms": 5,
+    "size": "3500 sqft"
+  },
+  {
+    "id": 3,
+    "img": "",
+    "name": "Pallazio Towers",
+    "price": "3.80 Cr",
+    "location": "Andheri",
+    "bathrooms": 4,
+    "bedrooms": 3,
+    "size": "2000 sqft"
+  },
+  {
+    "id": 4,
+    "img": "",
+    "name": "One Avighna Park",
+    "price": "8.20 Cr",
+    "location": "Juhu",
+    "bathrooms": 7,
+    "bedrooms": 6,
+    "size": "4000 sqft"
+  },
+  {
+    "id": 5,
+    "img": "",
+    "name": "Imperial Heights",
+    "price": "5.50 Cr",
+    "location": "Powai",
+    "bathrooms": 5,
+    "bedrooms": 4,
+    "size": "2800 sqft"
+  },
+  {
+    "id": 7,
+    "img": "",
+    "name": "Raheja Classique",
+    "price": "4.20 Cr",
+    "location": "Malad",
+    "bathrooms": 4,
+    "bedrooms": 3,
+    "size": "2200 sqft"
+  },
+  {
+    "id": 8,
+    "img": "",
+    "name": "Piramal Tower",
+    "price": "6.80 Cr",
+    "location": "Kurla",
+    "bathrooms": 6,
+    "bedrooms": 5,
+    "size": "3400 sqft"
+  },
+  {
+    "id": 9,
+    "img": "",
+    "name": "Godrej Platinum",
+    "price": "5.00 Cr",
+    "location": "Vile Parle",
+    "bathrooms": 5,
+    "bedrooms": 4,
+    "size": "2600 sqft"
+  }
 ]
