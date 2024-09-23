@@ -24,6 +24,7 @@ const HomePage = () => {
             {dummyData.map((property, index) => (
               <MyCard
                 key={index}
+                id={index +1}
                 price={property.price}
                 location={property.location}
                 name={property.name}

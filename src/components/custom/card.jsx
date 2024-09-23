@@ -11,6 +11,7 @@ import {
 
 export function MyCard({
   className,
+  id,
   price,
   location,
   name,
@@ -40,7 +41,7 @@ export function MyCard({
         {/* property image */}
         <div className=" w-full h-48 rounded-lg overflow-hidden cursor-pointer">
           <img
-            src={"https://placehold.co/400"}
+            src={id <= 5 ? `images/sample${id}.jpg` : "https://placehold.co/400"}
             alt="Placeholder"
             className="w-full h-full object-cover"
           />
