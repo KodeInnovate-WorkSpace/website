@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCursor } from "@/context/cursor.context";
+import { Button } from "@/components/ui/button";
 
 const AboutPage = () => {
   const { mouseEnter, mouseLeave } = useCursor();
@@ -40,21 +41,16 @@ const AboutPage = () => {
               Aenean id erat vel ligula viverra vehicula.
             </motion.p>
             <Link to={"/contact"}>
-              <motion.div
-                className="mt-20 bg-mainColor w-64 h-12 hover:bg-secondColor text-xl flex items-center justify-center group text-white rounded-xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <Button
+                className="mt-20 bg-mainColor w-64 h-12 hover:bg-secondColor text-xl flex items-center justify-center group text-white rounded-xl transition-transform duration-300"
+                onMouseEnter={mouseEnter}
+                onMouseLeave={mouseLeave}
               >
                 Contact Us
-                <motion.div
-                  className="ml-5 mt-1"
-                  initial={{ x: 0 }}
-                  whileHover={{ x: 10 }}
-                  transition={{ duration: 0.3 }}
-                >
+                <span className="ml-5 mt-1 transform transition-transform duration-300 group-hover:translate-x-2">
                   <FaArrowRightLong />
-                </motion.div>
-              </motion.div>
+                </span>
+              </Button>
             </Link>
           </div>
 
