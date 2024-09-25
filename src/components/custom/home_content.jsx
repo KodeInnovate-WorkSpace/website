@@ -12,7 +12,7 @@ const HomeContent = () => {
         className="bg-mainColor w-full h-auto rounded-3xl flex flex-col lg:flex-row items-center lg:h-[32rem] overflow-hidden relative"
       >
         {/* Text Section */}
-        <div className="flex-1 text-center mt-14 lg:mt-0 lg:text-left lg:ml-8 lg:p-6">
+        <div className="flex-1 text-center mt-14 lg:mt-0 lg:text-left lg:ml-8 lg:p-6 cursor-default">
           <motion.h1
             className="text-5xl lg:text-[6rem] lg:leading-none font-bold text-white"
             initial={{ x: -100, opacity: 0 }}
@@ -40,6 +40,7 @@ const HomeContent = () => {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
+            loading="lazy"
           />
         </div>
       </div>

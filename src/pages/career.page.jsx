@@ -1,8 +1,12 @@
 import Footer from "@/components/custom/footer";
 import Navbar from "@/components/custom/navbar";
 import React from "react";
+import { motion } from "framer-motion";
+import { useCursor } from "@/context/cursor.context";
 
 const CareerPage = () => {
+  const { blendMouseEnter, mouseLeave } = useCursor();
+
   return (
     <>
       <Navbar />
@@ -10,13 +14,22 @@ const CareerPage = () => {
         <section>
           {/* Top Image Div */}
           <div className="w-full h-1/3 bg-cover bg-center hidden lg:block">
-            <img src="images/careers.jpg" alt="Placeholder" className="h-80 w-full object-cover"/>
+            <img
+              src="images/careers.jpg"
+              alt="Placeholder"
+              className="h-80 w-full object-cover"
+              loading="lazy"
+            />
           </div>
 
           <div className="p-6 md:p-12">
             {/* Title - Available Jobs */}
             <div className="text-center my-8">
-              <h2 className="text-4xl text-mainColor md:text-4xl font-bold">
+              <h2
+                onMouseEnter={blendMouseEnter}
+                onMouseLeave={mouseLeave}
+                className="text-4xl text-mainColor md:text-4xl font-bold"
+              >
                 Available Jobs
               </h2>
             </div>
@@ -24,7 +37,12 @@ const CareerPage = () => {
             {/* Jobs List */}
             <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 space-y-6 md:space-y-0">
               {/* Sample Job 1 */}
-              <div className="p-4 border rounded-lg shadow-md bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center">
+              <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="p-4 border rounded-lg shadow-md bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center"
+              >
                 {/* Left Side - Job Details */}
                 <div className="md:w-3/4">
                   <h3 className="text-xl font-semibold">Frontend Developer</h3>
@@ -41,10 +59,15 @@ const CareerPage = () => {
                     Apply
                   </button>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Sample Job 2 */}
-              <div className="p-4 border rounded-lg shadow-md bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center">
+              <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+                className="p-4 border rounded-lg shadow-md bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center"
+              >
                 {/* Left Side - Job Details */}
                 <div className="md:w-3/4">
                   <h3 className="text-xl font-semibold">Frontend Developer</h3>
@@ -61,10 +84,15 @@ const CareerPage = () => {
                     Apply
                   </button>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Sample Job 3 */}
-              <div className="p-4 border rounded-lg shadow-md bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center">
+              <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+                className="p-4 border rounded-lg shadow-md bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center"
+              >
                 {/* Left Side - Job Details */}
                 <div className="md:w-3/4">
                   <h3 className="text-xl font-semibold">Frontend Developer</h3>
@@ -81,7 +109,7 @@ const CareerPage = () => {
                     Apply
                   </button>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>

@@ -12,6 +12,7 @@ export default {
       colors: {
         mainColor: '#7C4BD2',
         secondColor: '#5f2db5',
+        thirdColor: '#F7CB67',
         lightColor: "rgba(124,75,210, 0.2)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

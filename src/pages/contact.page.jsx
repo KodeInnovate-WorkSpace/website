@@ -9,7 +9,7 @@ import { SlSocialYoutube } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
 const ContactPage = () => {
-  const { mouseEnter, mouseLeave, blendMouseEnter } = useCursor();
+  const { mouseLeave, blendMouseEnter } = useCursor();
 
   return (
     <>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCursor } from "@/context/cursor.context";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +8,7 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const { blendMouseEnter, mouseLeave } = useCursor();
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-10">
@@ -16,32 +18,59 @@ const Navbar = () => {
             {/* Logo */}
 
             <Link to={"/"}>
-              <h1 className={`text-2xl font-bold text-mainColor`}>
+              <h1
+                onMouseEnter={blendMouseEnter}
+                onMouseLeave={mouseLeave}
+                className={`text-2xl font-bold text-mainColor`}
+              >
                 Deal Done Broker
               </h1>
             </Link>
           </div>
           <div className="hidden md:flex space-x-8 items-center">
             {/* Navigation Links */}
-            <Link to={"/"} className="text-gray-600 hover:text-gray-900">
+            <Link
+              to={"/"}
+              onMouseEnter={blendMouseEnter}
+              onMouseLeave={mouseLeave}
+              className="text-gray-600 hover:text-gray-900 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-mainColor after:transition-all after:duration-300 hover:after:w-full"
+            >
               Home
             </Link>
-            <Link to={"/about"} className="text-gray-600 hover:text-gray-900">
+            <Link
+              to={"/about"}
+              onMouseEnter={blendMouseEnter}
+              onMouseLeave={mouseLeave}
+              className="text-gray-600 hover:text-gray-900 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-mainColor after:transition-all after:duration-300 hover:after:w-full"
+            >
               About
             </Link>
             <Link
               to={"/properties"}
-              className="text-gray-600 hover:text-gray-900"
+              onMouseEnter={blendMouseEnter}
+              onMouseLeave={mouseLeave}
+              className="text-gray-600 hover:text-gray-900 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-mainColor after:transition-all after:duration-300 hover:after:w-full"
             >
               Properties
             </Link>
-            <Link to={"/contact"} className="text-gray-600 hover:text-gray-900">
+            <Link
+              to={"/contact"}
+              onMouseEnter={blendMouseEnter}
+              onMouseLeave={mouseLeave}
+              className="text-gray-600 hover:text-gray-900 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-mainColor after:transition-all after:duration-300 hover:after:w-full"
+            >
               Contact
             </Link>
-            <Link to={"/careers"} className="text-gray-600 hover:text-gray-900">
+            <Link
+              to={"/careers"}
+              onMouseEnter={blendMouseEnter}
+              onMouseLeave={mouseLeave}
+              className="text-gray-600 hover:text-gray-900 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-mainColor after:transition-all after:duration-300 hover:after:w-full"
+            >
               Careers
             </Link>
           </div>
+
           {/* Hamburger Menu */}
           <div className="flex md:hidden items-center">
             <button
@@ -73,7 +102,9 @@ const Navbar = () => {
         <div className="fixed inset-0 bg-black bg-opacity-70 z-50">
           <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out">
             <div className="flex justify-between items-center p-4">
-              <h2 className="text-xl text-mainColor font-bold">Deal Done Broker</h2>
+              <h2 className="text-xl text-mainColor font-bold">
+                Deal Done Broker
+              </h2>
               {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}

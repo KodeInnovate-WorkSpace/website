@@ -9,29 +9,32 @@ import { useCursor } from "@/context/cursor.context";
 import { Button } from "@/components/ui/button";
 
 const AboutPage = () => {
-  const { mouseEnter, mouseLeave } = useCursor();
+  const { blendMouseEnter, mouseLeave } = useCursor();
 
   return (
     <>
       <Navbar />
       <div className="pt-[4rem]">
         {/* intro section */}
-        <section className="flex flex-col md:flex-row items-start justify-between p-6 md:p-12 h-screen md:h-auto mb-8 lg:mb-0">
+        <section className="flex flex-col md:flex-row items-start justify-between p-6 md:p-12 h-screen md:h-auto mb-8 lg:mb-0 cursor-default">
           {/* Left Side - Text */}
-          <div className="md:w-1/2 w-full mb-4 md:mb-0">
-            <motion.h1
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="md:w-1/2 w-full mb-4 md:mb-0"
+          >
+            <h1
+              onMouseEnter={blendMouseEnter}
+              onMouseLeave={mouseLeave}
               className="text-mainColor text-3xl md:text-5xl font-bold mb-4"
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
             >
               This is Deal Done Broker
-            </motion.h1>
-            <motion.p
+            </h1>
+            <p
+              onMouseEnter={blendMouseEnter}
+              onMouseLeave={mouseLeave}
               className="text-gray-600 text-lg text-justify"
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Vestibulum eget arcu justo. Duis scelerisque elit et arcu
@@ -39,11 +42,11 @@ const AboutPage = () => {
               tempus fermentum. Sed sit amet mi interdum, gravida justo nec,
               dapibus libero. Proin non consequat libero. Suspendisse potenti.
               Aenean id erat vel ligula viverra vehicula.
-            </motion.p>
+            </p>
             <Link to={"/contact"}>
               <Button
-                className="mt-20 bg-mainColor w-64 h-12 hover:bg-secondColor text-xl flex items-center justify-center group text-white rounded-xl transition-transform duration-300"
-                onMouseEnter={mouseEnter}
+                className="mt-10 bg-mainColor w-64 h-12 hover:bg-secondColor text-xl flex items-center justify-center group text-white rounded-xl transition-transform duration-300"
+                onMouseEnter={blendMouseEnter}
                 onMouseLeave={mouseLeave}
               >
                 Contact Us
@@ -52,26 +55,35 @@ const AboutPage = () => {
                 </span>
               </Button>
             </Link>
-          </div>
+          </motion.div>
 
           {/* Right Side - Image Container */}
           <div className="md:w-1/2 w-full flex justify-center md:justify-end items-center">
-            <div className="lg:w-[30rem] lg:h-[28rem] w-full  rounded-md">
+            <motion.div
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="lg:w-[30rem] lg:h-[28rem] w-full  rounded-md"
+            >
               <img
                 src="images/team.png"
                 alt="Placeholder"
                 className="w-full h-full object-contain rounded-lg"
               />
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* vission & mission section  */}
+        {/* vision & mission section  */}
 
-        <section className="mt-24 px-6 md:p-12 bg-white">
+        <section className="mt-24 px-6 lg:px-12 bg-white lg:mt-2">
           {/* Title in the Middle */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl text-mainColor md:text-5xl font-bold">
+            <h1
+              onMouseEnter={blendMouseEnter}
+              onMouseLeave={mouseLeave}
+              className="text-3xl text-mainColor md:text-5xl font-bold"
+            >
               Vision & Mission
             </h1>
           </div>
@@ -102,10 +114,18 @@ const AboutPage = () => {
                 {/* text */}
 
                 <div className="my-2">
-                  <h2 className="text-left my-2 font-bold text-2xl">
+                  <h2
+                    onMouseEnter={blendMouseEnter}
+                    onMouseLeave={mouseLeave}
+                    className="text-left my-2 font-bold text-2xl"
+                  >
                     Our Mission
                   </h2>
-                  <p className="text-left font-semibold">
+                  <p
+                    onMouseEnter={blendMouseEnter}
+                    onMouseLeave={mouseLeave}
+                    className="text-left font-semibold"
+                  >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Iusto tenetur illo nihil facilis dolorem blanditiis eos
                     harum fugit suscipit voluptate!
@@ -127,10 +147,18 @@ const AboutPage = () => {
                 {/* text */}
 
                 <div className="my-2">
-                  <h2 className="text-left my-2 font-bold text-2xl">
+                  <h2
+                    onMouseEnter={blendMouseEnter}
+                    onMouseLeave={mouseLeave}
+                    className="text-left my-2 font-bold text-2xl"
+                  >
                     Our Vision
                   </h2>
-                  <p className="text-left font-semibold">
+                  <p
+                    onMouseEnter={blendMouseEnter}
+                    onMouseLeave={mouseLeave}
+                    className="text-left font-semibold"
+                  >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Iusto tenetur illo nihil facilis dolorem blanditiis eos
                     harum fugit suscipit voluptate!

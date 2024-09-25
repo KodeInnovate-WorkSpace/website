@@ -3,8 +3,11 @@ import { Form } from "../ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
+import { useCursor } from "@/context/cursor.context";
 
 const ContactForm = () => {
+  const { blendMouseEnter, mouseLeave } = useCursor();
+
   return (
     <>
       <>
@@ -47,7 +50,12 @@ const ContactForm = () => {
 
             {/* Submit Button */}
             <div>
-              <Button type="submit" className="bg-mainColor w-full hover:bg-secondColor">
+              <Button
+                type="submit"
+                onMouseEnter={blendMouseEnter}
+                onMouseLeave={mouseLeave}
+                className="bg-mainColor w-full hover:bg-secondColor h-12 text-md lg:text-xl"
+              >
                 Send Message
               </Button>
             </div>
