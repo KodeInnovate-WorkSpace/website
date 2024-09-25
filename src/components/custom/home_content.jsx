@@ -1,6 +1,7 @@
 import { useCursor } from "@/context/cursor.context";
 import React from "react";
 import { motion } from "framer-motion";
+import { Button } from "../ui/button";
 const HomeContent = () => {
   const { blendMouseEnter, mouseLeave } = useCursor();
 
@@ -29,6 +30,9 @@ const HomeContent = () => {
               PROPERTY
             </motion.span>
           </motion.h1>
+          {/* <Button className="bg-thirdColor mt-6 text-black text-lg lg:text-xl font-bold lg:h-14 lg:w-56 ">
+            Explore
+          </Button> */}
         </div>
 
         {/* Image Section */}
