@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Real Estate Agent",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "salary": "6,00,000 - 8,00,000",
+    "skills": ["Client Relations", "Negotiation", "Market Analysis", "Sales"]
+  },
+  {
+    "title": "Property Manager",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "salary": "7,00,000 - 9,00,000",
+    "skills": [
+      "Property Management",
+      "Maintenance Coordination",
+      "Tenant Relations",
+      "Financial Reporting"
+    ]
+  },
+  {
+    "title": "Real Estate Marketing Specialist",
+    "city": "Navi Mumbai",
+    "state": "Maharashtra",
+    "salary": "5,00,000 - 7,00,000",
+    "skills": [
+      "Digital Marketing",
+      "Content Creation",
+      "SEO",
+      "Brand Management"
+    ]
+  },
+  {
+    "title": "Commercial Real Estate Analyst",
+    "city": "Thane",
+    "state": "Maharashtra",
+    "salary": "8,50,000 - 10,00,000",
+    "skills": [
+      "Financial Analysis",
+      "Market Research",
+      "Investment Analysis",
+      "Real Estate Law"
+    ]
+  },
+  {
+    "title": "Construction Project Manager",
+    "city": "Nagpur",
+    "state": "Maharashtra",
+    "salary": "9,00,000 - 12,00,000",
+    "skills": [
+      "Project Management",
+      "Construction Oversight",
+      "Budgeting",
+      "Risk Management"
+    ]
+  }
+]

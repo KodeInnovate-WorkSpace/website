@@ -3,6 +3,7 @@ import Navbar from "@/components/custom/navbar";
 import React from "react";
 import { motion } from "framer-motion";
 import { useCursor } from "@/context/cursor.context";
+import JobCard from "@/components/custom/job_card";
 
 const CareerPage = () => {
   const { blendMouseEnter, mouseLeave } = useCursor();
@@ -12,15 +13,48 @@ const CareerPage = () => {
       <Navbar />
       <div className="pt-[4rem]">
         <section>
-          {/* Top Image Div */}
-          <div className="w-full h-1/3 bg-cover bg-center hidden lg:block">
-            <img
-              src="images/careers.jpg"
-              alt="Placeholder"
-              className="h-80 w-full object-cover"
-              loading="lazy"
-            />
-          </div>
+          {/* Top section */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="w-80 h-44 lg:w-[80rem] lg:h-64 mx-auto mt-6 p-6 rounded-lg lg:rounded-3xl bg-mainColor overflow-hidden sm:px-4 text-white flex flex-col lg:flex-row items-center lg:space-x-6 justify-between"
+          >
+            {/* Text Section */}
+            <div className="flex-1">
+              <motion.h1
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                className="text-md lg:text-4xl font-bold mb-4"
+              >
+                Join Our Passionate Real Estate Team
+              </motion.h1>
+              <motion.p
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                className="text-sm lg:text-lg mb-6"
+              >
+                Help us shape the future of real estate with innovation,
+                integrity, and a passion for excellence.
+              </motion.p>
+            </div>
+
+            {/* Image Section */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="hidden lg:block flex-shrink-0"
+            >
+              <img
+                src="/images/careers.png"
+                alt="Career"
+                className="rounded-lg lg:rounded-3xl object-contain w-[20rem]"
+              />
+            </motion.div>
+          </motion.div>
 
           <div className="p-6 md:p-12">
             {/* Title - Available Jobs */}
@@ -35,81 +69,8 @@ const CareerPage = () => {
             </div>
 
             {/* Jobs List */}
-            <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 space-y-6 md:space-y-0">
-              {/* Sample Job 1 */}
-              <motion.div
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="p-4 border rounded-lg shadow-md bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center"
-              >
-                {/* Left Side - Job Details */}
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-semibold">Frontend Developer</h3>
-                  <p className="text-gray-600">Location: New York, NY</p>
-                  <p className="text-gray-600">Salary: $80,000 - $100,000</p>
-                  <p className="text-gray-600">
-                    Skills: React, JavaScript, CSS, HTML
-                  </p>
-                </div>
-
-                {/* Right Side - Apply Button */}
-                <div className="mt-4 md:mt-0 md:w-1/4 flex justify-end">
-                  <button className="bg-mainColor text-white py-2 px-4 rounded-md hover:bg-secondColor">
-                    Apply
-                  </button>
-                </div>
-              </motion.div>
-
-              {/* Sample Job 2 */}
-              <motion.div
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                className="p-4 border rounded-lg shadow-md bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center"
-              >
-                {/* Left Side - Job Details */}
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-semibold">Frontend Developer</h3>
-                  <p className="text-gray-600">Location: New York, NY</p>
-                  <p className="text-gray-600">Salary: $80,000 - $100,000</p>
-                  <p className="text-gray-600">
-                    Skills: React, JavaScript, CSS, HTML
-                  </p>
-                </div>
-
-                {/* Right Side - Apply Button */}
-                <div className="mt-4 md:mt-0 md:w-1/4 flex justify-end">
-                  <button className="bg-mainColor text-white py-2 px-4 rounded-md hover:bg-secondColor">
-                    Apply
-                  </button>
-                </div>
-              </motion.div>
-
-              {/* Sample Job 3 */}
-              <motion.div
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
-                className="p-4 border rounded-lg shadow-md bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center"
-              >
-                {/* Left Side - Job Details */}
-                <div className="md:w-3/4">
-                  <h3 className="text-xl font-semibold">Frontend Developer</h3>
-                  <p className="text-gray-600">Location: New York, NY</p>
-                  <p className="text-gray-600">Salary: $80,000 - $100,000</p>
-                  <p className="text-gray-600">
-                    Skills: React, JavaScript, CSS, HTML
-                  </p>
-                </div>
-
-                {/* Right Side - Apply Button */}
-                <div className="mt-4 md:mt-0 md:w-1/4 flex justify-end">
-                  <button className="bg-mainColor text-white py-2 px-4 rounded-md hover:bg-secondColor">
-                    Apply
-                  </button>
-                </div>
-              </motion.div>
+            <div className="flex flex-col md:flex-row flex-wrap justify-center">
+              <JobCard />
             </div>
           </div>
         </section>

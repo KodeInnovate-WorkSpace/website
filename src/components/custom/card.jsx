@@ -35,13 +35,31 @@ export function MyCard({
     },
   ];
 
+  const handleClick = () => {
+    const whatsappNumber = "9326500602";
+    const message = `Hello, I am interested in the property located at ${location}. Here are the details:\n
+    - Name: ${name}\n
+    - Price: ₹${price}\n
+    - Bathrooms: ${bathrooms}\n
+    - Bedrooms: ${bedrooms}\n
+    - Size: ${size} sq ft`;
+
+    const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(url, "_blank");
+  };
+
   return (
     <Card className={cn("w-[300px]", className)} {...props}>
       <CardHeader>
         {/* property image */}
         <div className=" w-full h-48 rounded-lg overflow-hidden cursor-pointer">
           <img
-            src={id <= 5 ? `images/sample${id}.jpg` : "https://placehold.co/400"}
+            src={
+              id <= 5 ? `images/sample${id}.jpg` : "https://placehold.co/400"
+            }
             alt="Placeholder"
             className="w-full h-full object-cover"
           />
@@ -74,6 +92,7 @@ export function MyCard({
       </CardContent>
       <CardFooter>
         <Button
+          onClick={handleClick}
           className={`w-full h-12 text-lg bg-mainColor hover:bg-secondColor`}
         >
           Details

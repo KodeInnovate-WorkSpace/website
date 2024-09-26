@@ -18,7 +18,7 @@ const HomeGrid = () => {
           src="/images/guide.png"
           alt="trust"
           loading="lazy"
-          style={{ objectFit: "cover" }}
+          className="w-32 lg:w-full"
         />
       </div>
 
@@ -28,7 +28,8 @@ const HomeGrid = () => {
           src="/images/property.png"
           alt="trust"
           loading="lazy"
-          style={{ objectFit: "cover" }}
+          className="w-32 lg:w-full"
+
         />
         <h2>Extensive Property Listings</h2>
       </div>
@@ -39,7 +40,8 @@ const HomeGrid = () => {
           src="/images/focus.png"
           alt="trust"
           loading="lazy"
-          style={{ objectFit: "cover" }}
+          className="w-32 lg:w-full"
+
         />
 
         <h2>Client-Focused Services</h2>
@@ -56,7 +58,8 @@ const HomeGrid = () => {
           src="/images/trust.png"
           alt="trust"
           loading="lazy"
-          style={{ objectFit: "cover" }}
+          className="w-32 lg:w-full"
+
         />
       </div>
     </div>

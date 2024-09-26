@@ -30,6 +30,7 @@ const router = createBrowserRouter([
     element: <CareerPage />,
   },
 ]);
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CursorProvider>
