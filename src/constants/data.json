@@ -1,23 +1,27 @@
 [
   {
     "id": 1,
-    "img": "",
+    "img": "https://images.unsplash.com/photo-1722979631254-4819f251f9d7?q=80&w=1532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Raheja Imperia",
     "price": "4.90 Cr",
     "location": "Worli",
     "bathrooms": 5,
     "bedrooms": 4,
-    "size": "2300 sqft"
+    "size": "2300 sqft",
+    "featured": true,
+    "tag": "New Project"
   },
   {
     "id": 2,
-    "img": "",
+    "img": "https://images.unsplash.com/photo-1492659991124-ba70990ba2f4?q=80&w=1444&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Oberoi Skyheights",
     "price": "6.50 Cr",
     "location": "Bandra",
     "bathrooms": 6,
     "bedrooms": 5,
-    "size": "3500 sqft"
+    "size": "3500 sqft",
+    "featured": true,
+    "tag": "New Project"
   },
   {
     "id": 3,
@@ -41,23 +45,27 @@
   },
   {
     "id": 5,
-    "img": "",
+    "img": "https://images.unsplash.com/photo-1681039580747-569f9cd54858?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Imperial Heights",
     "price": "5.50 Cr",
     "location": "Powai",
     "bathrooms": 5,
     "bedrooms": 4,
-    "size": "2800 sqft"
+    "size": "2800 sqft",
+    "featured": true,
+    "tag": "Ready To Move"
   },
   {
     "id": 7,
-    "img": "",
+    "img": "https://images.unsplash.com/photo-1554893023-ded7f13536e8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Raheja Classique",
     "price": "4.20 Cr",
     "location": "Malad",
     "bathrooms": 4,
     "bedrooms": 3,
-    "size": "2200 sqft"
+    "size": "2200 sqft",
+    "featured": true,
+    "tag": "Finished"
   },
   {
     "id": 8,
@@ -77,6 +85,8 @@
     "location": "Vile Parle",
     "bathrooms": 5,
     "bedrooms": 4,
-    "size": "2600 sqft"
+    "size": "2600 sqft",
+    "featured":true,
+    "tag":"New Project"
   }
 ]

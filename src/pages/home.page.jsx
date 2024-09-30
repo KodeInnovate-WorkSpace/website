@@ -5,6 +5,7 @@ import Footer from "@/components/custom/footer";
 import HomeGrid from "@/components/custom/home_grid";
 import FAQSection from "@/components/custom/faq_section";
 import LocationCircle from "@/components/custom/location_circle";
+import FeaturedSection from "@/components/custom/featured_section";
 
 const HomePage = () => {
   const [locationCircleInView, setLocationCircleInView] = useState(false);
@@ -33,6 +34,10 @@ const HomePage = () => {
       <div className="pt-[4rem]">
         <div className="px-2 lg:px-10 mt-2">
           <HomeContent />
+        </div>
+
+        <div className="px-2 lg:px-10 mt-2">
+          <FeaturedSection />
         </div>
 
         <div

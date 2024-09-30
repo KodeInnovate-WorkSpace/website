@@ -32,7 +32,9 @@ const HomeContent = () => {
         </div>
 
         {/* Image Section */}
-        <div className="flex-1 w-full h-full lg:h-auto lg:w-[30rem]">
+        {/* <PropertyCarousel/> */}
+
+        <div className=" w-full h-full lg:h-auto lg:w-[30rem]">
           <motion.img
             src="images/building1.png"
             alt="Building"
