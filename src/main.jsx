@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import 'swiper/css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/home.page";
 import AboutPage from "./pages/about.page";
