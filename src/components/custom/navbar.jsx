@@ -12,19 +12,28 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 flex items-center">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className=" flex justify-between h-16">
+          <div className=" flex-shrink-0 flex items-center">
             {/* Logo */}
 
             <Link to={"/"}>
-              <h1
+              <div
                 onMouseEnter={blendMouseEnter}
                 onMouseLeave={mouseLeave}
-                className={`text-2xl font-bold text-mainColor`}
+                className="flex items-center"
               >
-                Deal Done Broker
-              </h1>
+                <img
+                  src="/images/logo.png"
+                  alt="Logo"
+                  className="w-16 object-contain"
+                />
+
+                {/* <h1 className="text-thirdColor font-bold">
+                  Deal Done{" "}
+                  <span className="text-mainColor font-bold">Properties</span>
+                </h1> */}
+              </div>
             </Link>
           </div>
           <div className="hidden md:flex space-x-8 items-center">
@@ -102,9 +111,8 @@ const Navbar = () => {
         <div className="fixed inset-0 bg-black bg-opacity-70 z-50">
           <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out">
             <div className="flex justify-between items-center p-4">
-              <h2 className="text-xl text-mainColor font-bold">
-                Deal Done Broker
-              </h2>
+              <img src="/images/logo.png" alt="Logo" className="w-16" />
+
               {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}

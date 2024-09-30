@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Mumbai",
+    "site_img": "https://images.unsplash.com/photo-1601961405399-801fb1f34581?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "projects": "15"
+  },
+  {
+    "id": "2",
+    "name": "Pune",
+    "site_img": "https://images.unsplash.com/photo-1714983007778-b370188238b8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "projects": "15"
+  },
+  {
+    "id": "3",
+    "name": "Gurugram",
+    "site_img": "https://images.unsplash.com/photo-1715870251827-370ee823cab1?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "projects": "15"
+  },
+  {
+    "id": "4",
+    "name": "Ahmedabad",
+    "site_img": "https://images.pexels.com/photos/17391304/pexels-photo-17391304/free-photo-of-view-of-modern-office-buildings-in-ahmedabad-india.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "projects": "15"
+  }
+]
