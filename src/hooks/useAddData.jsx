@@ -1,6 +1,5 @@
 import { useFirebase } from "../context/firebase.context";
 
-
 const useAddData = () => {
   const { addData } = useFirebase();
 

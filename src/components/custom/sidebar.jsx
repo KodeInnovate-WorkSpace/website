@@ -3,7 +3,7 @@ import React from "react";
 
 export const Sidebar = ({ onSelectTab, selectedTab }) => {
   return (
-    <div className="w-64 bg-gray-800 text-white flex flex-col">
+    <div className="w-64 bg-secondColor text-white flex flex-col">
       <div className="p-4 font-bold text-xl">Admin Panel</div>
       <nav className="flex-grow">
         <SidebarItem
@@ -24,8 +24,8 @@ export const Sidebar = ({ onSelectTab, selectedTab }) => {
 export const SidebarItem = ({ label, isActive, onClick }) => {
   return (
     <div
-      className={`p-4 cursor-pointer hover:bg-gray-700 ${
-        isActive ? "bg-gray-900" : ""
+      className={`p-4 cursor-pointer hover:bg-mainColor ${
+        isActive ? "bg-mainColor" : ""
       }`}
       onClick={onClick}
     >
