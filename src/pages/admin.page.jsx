@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Navbar from "@/components/custom/navbar";
 import { Sidebar } from "@/components/custom/sidebar";
-import AllData from "@/components/custom/alldata";
-import AddNewData from "@/components/custom/AddNewData";
+import AddNewData from "@/components/custom/add_new_data";
+import AllData from "@/components/custom/all_data";
 
 const AdminPage = () => {
   const [selectedTab, setSelectedTab] = useState("all-data");
