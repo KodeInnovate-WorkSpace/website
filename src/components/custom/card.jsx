@@ -36,7 +36,7 @@ export function MyCard({
   ];
 
   const handleClick = () => {
-    const whatsappNumber = "9326500602";
+    const whatsappNumber = import.meta.env.VITE_PHONE;
     const message = `Hello, I am interested in the property located at ${location}. Here are the details:\n
     - Name: ${name}\n
     - Price: ₹${price}\n
