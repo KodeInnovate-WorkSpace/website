@@ -10,8 +10,8 @@ import data from "../../constants/faq.json";
 export default function FAQSection() {
   return (
     <Accordion type="single" collapsible className="w-full">
-      {data.map((d) => (
-        <AccordionItem value={`item-${d.id}`}>
+      {data.map((d,index) => (
+        <AccordionItem key={index} value={`item-${d.id}`}>
           <AccordionTrigger className="text-md lg:text-lg text-left">
             {d.title}
           </AccordionTrigger>

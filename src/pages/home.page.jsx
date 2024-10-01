@@ -31,7 +31,7 @@ const HomePage = () => {
     <div>
       <Navbar />
 
-      <div className="pt-[4rem]">
+      <main className="pt-[4rem]">
         <div className="px-2 lg:px-10 mt-2">
           <HomeContent />
         </div>
@@ -54,7 +54,7 @@ const HomePage = () => {
         <div className="px-2 py-6 lg:px-10 mt-2">
           <FAQSection />
         </div>
-      </div>
+      </main>
 
       <Footer />
     </div>

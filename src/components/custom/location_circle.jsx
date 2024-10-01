@@ -1,9 +1,10 @@
 import React from "react";
-import data from "../../constants/sites.json";
 import { motion } from "framer-motion";
 import { useCursor } from "@/context/cursor.context";
+import useFetchData from "@/hooks/useFetchData";
 
 const LocationCircle = ({ isVisible }) => {
+  //animation
   const { blendMouseEnter, mouseLeave } = useCursor();
 
   const containerVariants = {
@@ -30,10 +31,16 @@ const LocationCircle = ({ isVisible }) => {
     },
   };
 
+  //data fetching
+  const { data, loading } = useFetchData("category");
+
+  if (loading) return <p>Loading...</p>;
+
   return (
     <>
       {data.map((d, index) => (
         <motion.div
+          key={d.id || index}
           className="flex flex-wrap justify-center mt-10"
           variants={containerVariants}
           initial="hidden"
@@ -42,13 +49,12 @@ const LocationCircle = ({ isVisible }) => {
           onMouseLeave={mouseLeave}
         >
           <motion.div
-            key={index}
             className="flex flex-col items-center space-y-2 w-1/2 lg:w-1/4 mb-4"
             variants={circleVariants}
           >
             <div className="w-32 h-32 lg:w-52 lg:h-52 bg-blue-300 rounded-full overflow-hidden">
               <motion.img
-                src={d.site_img}
+                src={d.img}
                 alt={d.name}
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.1 }}

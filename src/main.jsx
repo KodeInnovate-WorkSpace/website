@@ -8,6 +8,8 @@ import CareerPage from "./pages/career.page";
 import ContactPage from "./pages/contact.page";
 import PropertiesPage from "./pages/properties.page";
 import { CursorProvider } from "./context/cursor.context";
+import { FirebaseProvider } from "./context/firebase.context";
+import AdminPage from "./pages/admin.page";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,12 +31,18 @@ const router = createBrowserRouter([
     path: "/careers",
     element: <CareerPage />,
   },
+  {
+    path: "/admin",
+    element: <AdminPage />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <CursorProvider>
-      <RouterProvider router={router} />
-    </CursorProvider>
+    <FirebaseProvider>
+      <CursorProvider>
+        <RouterProvider router={router} />
+      </CursorProvider>
+    </FirebaseProvider>
   </StrictMode>
 );

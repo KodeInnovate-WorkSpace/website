@@ -12,8 +12,8 @@ const FeaturedSection = () => {
             To get more information, please click on the images below.
           </h3>
         </div>
-        <div className="my-8">
           {/* scrolling  */}
+        <div className="my-8 flex">
 
           <FeaturedCard/>
         </div>
