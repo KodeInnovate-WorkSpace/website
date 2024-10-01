@@ -9,6 +9,7 @@ const useFetchData = (collectionName) => {
   useEffect(() => {
     const getData = async () => {
       const fetchedData = await fetchData(collectionName);
+      console.log(`Data from ${collectionName}:`, fetchedData);
       setData(fetchedData);
       setLoading(false);
     };

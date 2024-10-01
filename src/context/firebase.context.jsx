@@ -16,11 +16,13 @@ export const useFirebase = () => useContext(FirebaseContext);
 
 export const FirebaseProvider = ({ children }) => {
   const fetchData = async (collectionName) => {
+    console.log(`Fetching data from ${collectionName}`);
     const querySnapshot = await getDocs(collection(db, collectionName));
     const data = querySnapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
+    console.log("Fetched data:", data);
     return data;
   };
 

@@ -3,22 +3,36 @@ import MyDataTable from "./datatable";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import useFetchData from "@/hooks/useFetchData";
 const AllData = () => {
-  const { propertyData, propertyloading } = useFetchData("properties");
-  const { categoryData, categoryLoading } = useFetchData("category");
+  const { data: propertyData, loading: propertyLoading } =
+    useFetchData("properties");
+  const { data: categoryData, loading: categoryLoading } =
+    useFetchData("category");
 
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-4">View Data</h1>
-      <Tabs defaultValue="properties" className="w-full">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="properties">Properties</TabsTrigger>
-          <TabsTrigger value="category">Category</TabsTrigger>
+      <Tabs defaultValue="properties" className="w-full ">
+        <TabsList className="grid w-full grid-cols-2  h-10">
+          <TabsTrigger value="properties" className="text-md">
+            Properties
+          </TabsTrigger>
+          <TabsTrigger value="category" className="text-md">
+            Category
+          </TabsTrigger>
         </TabsList>
         <TabsContent value="properties">
-          <MyDataTable data={propertyData} collectionName={"property"} />
+          {propertyLoading ? (
+            <p>Loading...</p>
+          ) : (
+            <MyDataTable data={propertyData} collectionName={"properties"} />
+          )}
         </TabsContent>
         <TabsContent value="category">
-          <MyDataTable data={categoryData} collectionName={"category"} />
+          {categoryLoading ? (
+            <p>Loading...</p>
+          ) : (
+            <MyDataTable data={categoryData} collectionName={"category"} />
+          )}
         </TabsContent>
       </Tabs>
     </div>
