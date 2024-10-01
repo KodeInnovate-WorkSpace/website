@@ -29,7 +29,7 @@ const AboutPage = () => {
               onMouseLeave={mouseLeave}
               className="text-mainColor text-3xl md:text-5xl font-bold mb-4"
             >
-              This is Deal Done Broker
+              This is Deal Done Properties
             </h1>
             <p
               onMouseEnter={blendMouseEnter}

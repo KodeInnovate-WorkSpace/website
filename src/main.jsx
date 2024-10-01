@@ -10,6 +10,7 @@ import PropertiesPage from "./pages/properties.page";
 import { CursorProvider } from "./context/cursor.context";
 import { FirebaseProvider } from "./context/firebase.context";
 import AdminPage from "./pages/admin.page";
+
 const router = createBrowserRouter([
   {
     path: "/",
