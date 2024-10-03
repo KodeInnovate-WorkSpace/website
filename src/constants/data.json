@@ -4,7 +4,7 @@
     "img": "https://images.unsplash.com/photo-1722979631254-4819f251f9d7?q=80&w=1532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Raheja Imperia",
     "price": "4.90 Cr",
-    "location": "Worli",
+    "location": "mumbai",
     "bathrooms": 5,
     "bedrooms": 4,
     "size": "2300 sqft",
@@ -16,7 +16,7 @@
     "img": "https://images.unsplash.com/photo-1492659991124-ba70990ba2f4?q=80&w=1444&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Oberoi Skyheights",
     "price": "6.50 Cr",
-    "location": "Bandra",
+    "location": "mumbai",
     "bathrooms": 6,
     "bedrooms": 5,
     "size": "3500 sqft",
@@ -25,30 +25,34 @@
   },
   {
     "id": 3,
-    "img": "",
+    "img": "https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Pallazio Towers",
     "price": "3.80 Cr",
-    "location": "Andheri",
+    "location": "mumbai",
     "bathrooms": 4,
     "bedrooms": 3,
-    "size": "2000 sqft"
+    "size": "2000 sqft",
+    "featured": false,
+    "tag": "New Project"
   },
   {
     "id": 4,
-    "img": "",
+    "img": "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "One Avighna Park",
     "price": "8.20 Cr",
-    "location": "Juhu",
+    "location": "pune",
     "bathrooms": 7,
     "bedrooms": 6,
-    "size": "4000 sqft"
+    "size": "4000 sqft",
+    "featured": false,
+    "tag": "New Project"
   },
   {
     "id": 5,
     "img": "https://images.unsplash.com/photo-1681039580747-569f9cd54858?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Imperial Heights",
     "price": "5.50 Cr",
-    "location": "Powai",
+    "location": "pune",
     "bathrooms": 5,
     "bedrooms": 4,
     "size": "2800 sqft",
@@ -60,7 +64,7 @@
     "img": "https://images.unsplash.com/photo-1554893023-ded7f13536e8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Raheja Classique",
     "price": "4.20 Cr",
-    "location": "Malad",
+    "location": "ahmedabad",
     "bathrooms": 4,
     "bedrooms": 3,
     "size": "2200 sqft",
@@ -69,24 +73,26 @@
   },
   {
     "id": 8,
-    "img": "",
+    "img": "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Piramal Tower",
     "price": "6.80 Cr",
-    "location": "Kurla",
+    "location": "gurugram",
     "bathrooms": 6,
     "bedrooms": 5,
-    "size": "3400 sqft"
+    "size": "3400 sqft",
+    "featured": false,
+    "tag": "New Project"
   },
   {
     "id": 9,
-    "img": "",
+    "img": "https://images.unsplash.com/photo-1483097365279-e8acd3bf9f18?q=80&w=1411&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "name": "Godrej Platinum",
     "price": "5.00 Cr",
-    "location": "Vile Parle",
+    "location": "gurugram",
     "bathrooms": 5,
     "bedrooms": 4,
     "size": "2600 sqft",
-    "featured":true,
-    "tag":"New Project"
+    "featured": true,
+    "tag": "New Project"
   }
 ]

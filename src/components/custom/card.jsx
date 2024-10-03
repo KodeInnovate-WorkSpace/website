@@ -12,6 +12,7 @@ import {
 export function MyCard({
   className,
   id,
+  img,
   price,
   location,
   name,
@@ -57,9 +58,7 @@ export function MyCard({
         {/* property image */}
         <div className=" w-full h-48 rounded-lg overflow-hidden cursor-pointer">
           <img
-            src={
-              id <= 5 ? `images/sample${id}.jpg` : "https://placehold.co/400"
-            }
+            src={img}
             alt="Placeholder"
             className="w-full h-full object-cover"
           />
@@ -73,7 +72,9 @@ export function MyCard({
         </CardTitle>
 
         <CardDescription>
-          <p className="-mb-9">{location}</p>
+          <p className="-mb-9">
+            {location.charAt(0).toUpperCase() + location.slice(1).toLowerCase()}
+          </p>
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">

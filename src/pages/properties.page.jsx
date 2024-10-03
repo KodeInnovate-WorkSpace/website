@@ -20,6 +20,7 @@ const PropertiesPage = () => {
               <MyCard
                 key={index}
                 id={index + 1}
+                img={property.img}
                 price={property.price}
                 location={property.location}
                 name={property.name}
@@ -41,6 +42,7 @@ const PropertiesPage = () => {
               <MyCard
                 key={index}
                 id={index + 1}
+                img={property.img}
                 price={property.price}
                 location={property.location}
                 name={property.name}
