@@ -1,10 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import { Navigation } from "swiper/modules";
 import data from "../../constants/data.json";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const FeaturedSection = () => {
   return (
-    <div className="container mx-auto flex flex-col items-center justify-center overflow-hidden py-5 ">
+    <div className="container mx-auto flex flex-col items-center justify-center overflow-hidden py-5">
       <div>
         <h1 className="text-center font-bold text-gray-800 text-xl lg:text-2xl">
           Featured Properties
@@ -14,10 +16,13 @@ const FeaturedSection = () => {
         </h3>
       </div>
 
-      <div className="my-8 w-full mx-auto">
+      <div className="my-8 w-full ">
         <Swiper
-          spaceBetween={20}
           slidesPerView={1}
+          modules={[Navigation]}
+          navigation
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -32,12 +37,11 @@ const FeaturedSection = () => {
         >
           {data.map((d) =>
             d.featured ? (
-              <SwiperSlide>
+              <SwiperSlide key={d.id}>
                 <div
                   className="w-64 h-72 rounded-lg flex flex-col justify-between items-start p-4 mx-2"
                   style={{
                     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(${d.img})`,
-
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
