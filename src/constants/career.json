@@ -29,29 +29,5 @@
       "SEO",
       "Brand Management"
     ]
-  },
-  {
-    "title": "Commercial Real Estate Analyst",
-    "city": "Thane",
-    "state": "Maharashtra",
-    "salary": "8,50,000 - 10,00,000",
-    "skills": [
-      "Financial Analysis",
-      "Market Research",
-      "Investment Analysis",
-      "Real Estate Law"
-    ]
-  },
-  {
-    "title": "Construction Project Manager",
-    "city": "Nagpur",
-    "state": "Maharashtra",
-    "salary": "9,00,000 - 12,00,000",
-    "skills": [
-      "Project Management",
-      "Construction Oversight",
-      "Budgeting",
-      "Risk Management"
-    ]
   }
 ]

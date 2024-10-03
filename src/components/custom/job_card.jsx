@@ -33,8 +33,10 @@ const JobCard = () => {
           {/* Left Side - Job Details */}
           <div className="md:w-3/4">
             <h3 className="text-xl font-semibold">{job.title}</h3>
-            <p className="text-gray-600">Location: {job.location}</p>
-            <p className="text-gray-600">Salary: {job.salary}</p>
+            <p className="text-gray-600">
+              Location: {job.city}, {job.state}
+            </p>
+            <p className="text-gray-600">Salary (INR): {job.salary}</p>
             <p className="text-gray-600">Skills: {job.skills.join(", ")}</p>
           </div>
 
