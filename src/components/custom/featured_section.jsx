@@ -13,7 +13,7 @@ const FeaturedSection = () => {
         </h1>
         <h3 className="text-center font-semibold text-gray-700 lg:text-xl">
           To get more information, please click on the images below.
-        </h3>
+        </h3>   
       </div>
 
       <div className="my-8 w-full">
@@ -37,6 +37,7 @@ const FeaturedSection = () => {
             1024: {
               slidesPerView: 4,
               spaceBetween: 30, // Adjust space for desktop
+              centeredSlides:false,
             },
           }}
         >
