@@ -16,9 +16,11 @@ const FeaturedSection = () => {
         </h3>
       </div>
 
-      <div className="my-8 w-full ">
+      <div className="my-8 w-full">
         <Swiper
           slidesPerView={1}
+          centeredSlides={true} // Center the active slide
+          spaceBetween={20} // Space between slides
           modules={[Navigation]}
           navigation
           onSwiper={(swiper) => console.log(swiper)}
@@ -26,12 +28,15 @@ const FeaturedSection = () => {
           breakpoints={{
             640: {
               slidesPerView: 1,
+              spaceBetween: 10, // Adjust space for mobile
             },
             768: {
               slidesPerView: 2,
+              spaceBetween: 20, // Adjust space for tablet
             },
             1024: {
               slidesPerView: 4,
+              spaceBetween: 30, // Adjust space for desktop
             },
           }}
         >
@@ -39,7 +44,7 @@ const FeaturedSection = () => {
             d.featured ? (
               <SwiperSlide key={d.id}>
                 <div
-                  className="w-64 h-72 rounded-lg flex flex-col justify-between items-start p-4 mx-2"
+                  className="w-64 h-72 rounded-lg flex flex-col justify-between items-start p-4 mx-auto"
                   style={{
                     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(${d.img})`,
                     backgroundSize: "cover",
