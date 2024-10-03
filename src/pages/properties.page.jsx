@@ -3,8 +3,17 @@ import Navbar from "@/components/custom/navbar";
 import React from "react";
 import dummyData from "../constants/data.json";
 import { MyCard } from "@/components/custom/card";
+import { useLocation } from "react-router-dom";
 
 const PropertiesPage = () => {
+  const { search } = useLocation();
+  const query = new URLSearchParams(search);
+  const selectedLocation = query.get("location");
+
+  const locationFilteredData = selectedLocation
+    ? dummyData.filter((d) => d.location === selectedLocation)
+    : dummyData;
+
   return (
     <>
       <Navbar />
@@ -16,7 +25,7 @@ const PropertiesPage = () => {
           </div>
 
           <div className="flex flex-wrap justify-start gap-x-6 gap-y-6">
-            {dummyData.map((property, index) => (
+            {locationFilteredData.map((property, index) => (
               <MyCard
                 key={index}
                 id={index + 1}
@@ -38,7 +47,7 @@ const PropertiesPage = () => {
           </div>
 
           <div className="flex flex-wrap justify-start gap-x-6 gap-y-6">
-            {dummyData.map((property, index) => (
+            {locationFilteredData.map((property, index) => (
               <MyCard
                 key={index}
                 id={index + 1}

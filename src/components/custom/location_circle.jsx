@@ -2,8 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useCursor } from "@/context/cursor.context";
 import useFetchData from "@/hooks/useFetchData";
+import { useNavigate } from "react-router-dom";
 
 const LocationCircle = ({ isVisible }) => {
+  //navigation
+  const navigateProperties = useNavigate();
+  const handleLocationClick = (locationName) => {
+    navigateProperties(`/properties?location=${locationName}`);
+  };
   //animation
   const { blendMouseEnter, mouseLeave } = useCursor();
 
@@ -47,6 +53,7 @@ const LocationCircle = ({ isVisible }) => {
           animate={isVisible ? "visible" : "hidden"}
           onMouseEnter={blendMouseEnter}
           onMouseLeave={mouseLeave}
+          onClick={() => handleLocationClick(d.name.toLowerCase())}
         >
           <motion.div
             className="flex flex-col items-center space-y-2 w-1/2 lg:w-1/4 mb-4"
