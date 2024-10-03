@@ -1,79 +1,58 @@
-import AgentCard from "./agent_card";
 import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { SlSocialYoutube } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import { useCursor } from "@/context/cursor.context";
+import featuredData from "../../constants/data.json";
 
 const Footer = () => {
   const { blendMouseEnter, mouseLeave } = useCursor();
 
+  const filterFeaturedProperty = [];
+
+  for (let i = 0; i < featuredData.length; i++) {
+    if (featuredData[i].featured) {
+      filterFeaturedProperty.push(featuredData[i]);
+      if (filterFeaturedProperty.length === 4) break;
+    }
+  }
+
   return (
-    <footer
-      onMouseEnter={blendMouseEnter}
-      onMouseLeave={mouseLeave}
-      className="bg-mainColor text-gray-300 py-10 mt-10"
-    >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-mainColor text-gray-300 py-10 mt-10">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
         {/* Recent Properties */}
-        <div>
-          <h2 className="text-xl font-semibold mb-4 text-white">
+        <div onMouseEnter={blendMouseEnter} onMouseLeave={mouseLeave}>
+          <h2 className="text-xl font-bold mb-4 text-white">
             Recent Properties
           </h2>
           <ul className="space-y-2">
-            <li>
-              <a href="#" className="hover:underline">
-                Raheja Classique
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Piramal Tower
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                One Avighna Park
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Godrej Platinum
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Our Agents */}
-        <div>
-          <h2 className="text-xl font-semibold mb-4 text-white">Our Agents</h2>
-          <ul className="space-y-4">
-            <AgentCard agentName={"Prime Property Solutions"} />
-            <AgentCard agentName={"Dream Homes Realty"} />
-            <AgentCard agentName={"Urban Nest Realtors"} />
-            <AgentCard agentName={"Haven Realty Co."} />
+            {filterFeaturedProperty.map((d) => (
+              <li className="text-white" key={d.id}>
+                <Link to={"/"} className="hover:underline">
+                  {d.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Contact */}
-        <div>
-          <h2 className="text-xl font-semibold mb-4 text-white">Contact</h2>
-          <p className="mb-2">
-            <strong>Address:</strong> 123 Real Estate Ave, City, State
+        <div onMouseEnter={blendMouseEnter} onMouseLeave={mouseLeave}>
+          <h2 className="text-xl font-bold mb-4 text-white">Contact</h2>
+          <p className="mb-2 text-white">
+            <span className="font-bold ">Address:</span> Kalyan Phata Near HP
+            Petrol Pump
           </p>
-          <p className="mb-2">
-            <strong>Phone:</strong> +1 234 567 890
+          <p className="mb-2 text-white">
+            <span className="font-bold">Phone:</span> +91 8291492129
           </p>
-          <p className="mb-2">
-            <strong>Email:</strong> contact@realestate.com
-          </p>
-          <p className="mb-2">
-            <strong>RERA No:</strong> ABC123456
+          <p className="mb-2 text-white">
+            <span className="font-bold">Email:</span> info@s1media.in
           </p>
         </div>
 
         {/* Social Media Links */}
-        <div>
-          <h2 className="text-xl font-semibold mb-4 text-white">Follow Us</h2>
+        <div onMouseEnter={blendMouseEnter} onMouseLeave={mouseLeave}>
+          <h2 className="text-xl font-bold mb-4 text-white">Follow Us</h2>
           <ul className="flex space-x-4 mt-2">
             <li className="transform transition-transform duration-300 hover:-translate-y-1">
               <Link>
@@ -97,6 +76,17 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+      </div>
+
+      {/* Powered by Kodeinnovate Solutions */}
+      <div
+        onMouseEnter={blendMouseEnter}
+        onMouseLeave={mouseLeave}
+        className="text-center mt-10 text-white text-sm lg:text-[1rem]"
+      >
+        <a href="https://kodeinnovate.in/">
+          Powered by Kodeinnovate Solutions Private Limited
+        </a>
       </div>
     </footer>
   );

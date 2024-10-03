@@ -26,6 +26,7 @@ export const CursorProvider = ({ children }) => {
     default: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
+      backgroundColor:"#5f2db5"
     },
     text: {
       height: 64,
@@ -42,7 +43,7 @@ export const CursorProvider = ({ children }) => {
       x: mousePosition.x - 42,
       y: mousePosition.y - 42,
       backgroundColor: "transparent",
-      border: "2px solid #7C4BD2",
+      border: "2px solid #5f2db5",
     },
   };
 

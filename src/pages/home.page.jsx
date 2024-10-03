@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import Navbar from "@/components/custom/navbar";
 import HomeContent from "@/components/custom/home_content";
 import Footer from "@/components/custom/footer";
-import HomeGrid from "@/components/custom/home_grid";
 import FAQSection from "@/components/custom/faq_section";
 import LocationCircle from "@/components/custom/location_circle";
 import FeaturedSection from "@/components/custom/featured_section";
+import ScrollToTop from "@/components/custom/scroll_to_top_button";
 
 const HomePage = () => {
   const [locationCircleInView, setLocationCircleInView] = useState(false);
@@ -47,14 +47,14 @@ const HomePage = () => {
           <LocationCircle isVisible={locationCircleInView} />
         </div>
 
-        <div className="px-2 py-6 lg:px-10 mt-2">
-          <HomeGrid />
-        </div>
+    
         {/* FAQ  */}
         <div className="px-2 py-6 lg:px-10 mt-2">
           <FAQSection />
         </div>
       </main>
+
+      <ScrollToTop/>
 
       <Footer />
     </div>
