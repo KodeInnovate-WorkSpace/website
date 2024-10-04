@@ -2,22 +2,19 @@ import React from "react";
 import careerData from "../../constants/career.json";
 import { motion } from "framer-motion";
 import { useCursor } from "@/context/cursor.context";
+import useWhatsApp from "@/hooks/useWhatsApp";
 
 const JobCard = () => {
   const { blendMouseEnter, mouseLeave } = useCursor();
 
   const submitApplication = (job) => {
-    const whatsappNumber = "9326500602";
     const message = `
       - Title: ${job.title}\n
       - Location: ${job.city}, ${job.state}\n
       - Salary: ${job.salary}`;
 
-    const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(
-      message
-    )}`;
-
-    window.open(url, "_blank");
+    const sendWhatsAppMessage = useWhatsApp(message);
+    sendWhatsAppMessage();
   };
 
   return (

@@ -5,12 +5,14 @@ import Footer from "@/components/custom/footer";
 import FAQSection from "@/components/custom/faq_section";
 import LocationCircle from "@/components/custom/location_circle";
 import FeaturedSection from "@/components/custom/featured_section";
-import ScrollToTop from "@/components/custom/scroll_to_top_button";
 
 const HomePage = () => {
   const [locationCircleInView, setLocationCircleInView] = useState(false);
 
   useEffect(() => {
+    //scroll to top on page load
+    window.scrollTo(0, 0);
+
     const handleScroll = () => {
       const locationCircleElement = document.getElementById("location-circle");
       const rect = locationCircleElement.getBoundingClientRect();
@@ -47,14 +49,11 @@ const HomePage = () => {
           <LocationCircle isVisible={locationCircleInView} />
         </div>
 
-    
         {/* FAQ  */}
         <div className="px-2 py-6 lg:px-10 mt-2">
           <FAQSection />
         </div>
       </main>
-
-      <ScrollToTop/>
 
       <Footer />
     </div>

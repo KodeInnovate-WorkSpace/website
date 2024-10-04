@@ -3,14 +3,16 @@ import Navbar from "@/components/custom/navbar";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useCursor } from "@/context/cursor.context";
 import { Button } from "@/components/ui/button";
 
 const AboutPage = () => {
   const { blendMouseEnter, mouseLeave } = useCursor();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />

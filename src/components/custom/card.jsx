@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import useWhatsApp from "@/hooks/useWhatsApp";
 
 export function MyCard({
   className,
@@ -37,7 +38,6 @@ export function MyCard({
   ];
 
   const handleClick = () => {
-    const whatsappNumber = import.meta.env.VITE_PHONE;
     const message = `Hello, I am interested in the property located at ${location}. Here are the details:\n
     - Name: ${name}\n
     - Price: ₹${price}\n
@@ -45,11 +45,8 @@ export function MyCard({
     - Bedrooms: ${bedrooms}\n
     - Size: ${size} sq ft`;
 
-    const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(
-      message
-    )}`;
-
-    window.open(url, "_blank");
+    const sendWhatsAppMessage = useWhatsApp(message);
+    sendWhatsAppMessage();
   };
 
   return (

@@ -1,11 +1,16 @@
 import Footer from "@/components/custom/footer";
 import Navbar from "@/components/custom/navbar";
-import React from "react";
+import React, { useEffect } from "react";
 import dummyData from "../constants/data.json";
 import { MyCard } from "@/components/custom/card";
 import { useLocation } from "react-router-dom";
 
 const PropertiesPage = () => {
+  //scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { search } = useLocation();
   const query = new URLSearchParams(search);
   const selectedLocation = query.get("location");

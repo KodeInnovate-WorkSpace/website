@@ -3,14 +3,17 @@ import Footer from "@/components/custom/footer";
 import Navbar from "@/components/custom/navbar";
 import { Label } from "@/components/ui/label";
 import { useCursor } from "@/context/cursor.context";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { SlSocialYoutube } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
 const ContactPage = () => {
   const { mouseLeave, blendMouseEnter } = useCursor();
-
+  //scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />
@@ -43,7 +46,11 @@ const ContactPage = () => {
           </div>
 
           {/* Right: Contact Details */}
-          <div onMouseEnter={blendMouseEnter} onMouseLeave={mouseLeave} className="flex-1 p-6 space-y-6 flex justify-start bg-mainColor text-white rounded-3xl">
+          <div
+            onMouseEnter={blendMouseEnter}
+            onMouseLeave={mouseLeave}
+            className="flex-1 p-6 space-y-6 flex justify-start bg-mainColor text-white rounded-3xl"
+          >
             <div className="w-full max-w-md space-y-6">
               {/* Call Section */}
               <div>
@@ -53,7 +60,7 @@ const ContactPage = () => {
               </div>
 
               {/* Address Section */}
-              <div >
+              <div>
                 <h1 className="text-2xl font-bold">Visit Us</h1>
                 <Label>Chat to us in person</Label>
                 <h2>Kalyan Phata Near HP Petrol Pump</h2>

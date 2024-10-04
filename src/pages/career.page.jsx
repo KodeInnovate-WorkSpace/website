@@ -1,13 +1,16 @@
 import Footer from "@/components/custom/footer";
 import Navbar from "@/components/custom/navbar";
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useCursor } from "@/context/cursor.context";
 import JobCard from "@/components/custom/job_card";
 
 const CareerPage = () => {
   const { blendMouseEnter, mouseLeave } = useCursor();
-
+//scroll to top on page load
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
   return (
     <>
       <Navbar />
