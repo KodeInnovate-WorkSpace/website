@@ -1,7 +1,8 @@
 import { useCursor } from "@/context/cursor.context";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,13 @@ const Navbar = () => {
   };
 
   const { blendMouseEnter, mouseLeave } = useCursor();
-
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Properties", path: "/properties" },
+    { label: "Contact", path: "/contact" },
+    { label: "Careers", path: "/careers" },
+  ];
   return (
     <nav className="bg-white shadow-md fixed w-full z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,46 +41,17 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8 items-center">
-            <Link
-              to="/"
-              onMouseEnter={blendMouseEnter}
-              onMouseLeave={mouseLeave}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              onMouseEnter={blendMouseEnter}
-              onMouseLeave={mouseLeave}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              About
-            </Link>
-            <Link
-              to="/properties"
-              onMouseEnter={blendMouseEnter}
-              onMouseLeave={mouseLeave}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Properties
-            </Link>
-            <Link
-              to="/contact"
-              onMouseEnter={blendMouseEnter}
-              onMouseLeave={mouseLeave}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Contact
-            </Link>
-            <Link
-              to="/careers"
-              onMouseEnter={blendMouseEnter}
-              onMouseLeave={mouseLeave}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Careers
-            </Link>
+            {navItems.map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                onMouseEnter={blendMouseEnter}
+                onMouseLeave={mouseLeave}
+                className="text-gray-600 hover:text-gray-900 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-mainColor after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile Menu (Hamburger) */}
@@ -101,49 +79,28 @@ const Navbar = () => {
               {/* Sheet Content (Mobile Sidebar) */}
               <SheetContent side="left">
                 <div>
-                  {/* <SheetHeader>
-                    <div className="flex justify-between items-center mb-4">
-                      <img src="/images/logo.png" alt="Logo" className="w-16" />
-                    </div>
-                  </SheetHeader> */}
-
                   {/* Mobile Navigation Links */}
                   <nav className="mt-6">
-                    <Link
-                      to="/"
-                      className="block text-gray-600 hover:text-gray-900 py-2"
-                      onClick={toggleMenu}
-                    >
-                      Home
-                    </Link>
-                    <Link
-                      to="/about"
-                      className="block text-gray-600 hover:text-gray-900 py-2"
-                      onClick={toggleMenu}
-                    >
-                      About
-                    </Link>
-                    <Link
-                      to="/properties"
-                      className="block text-gray-600 hover:text-gray-900 py-2"
-                      onClick={toggleMenu}
-                    >
-                      Properties
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="block text-gray-600 hover:text-gray-900 py-2"
-                      onClick={toggleMenu}
-                    >
-                      Contact
-                    </Link>
-                    <Link
-                      to="/careers"
-                      className="block text-gray-600 hover:text-gray-900 py-2"
-                      onClick={toggleMenu}
-                    >
-                      Careers
-                    </Link>
+                    {navItems.map((item, index) => (
+                      <motion.span
+                        key={item.path}
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{
+                          duration: 0.5,
+                          ease: "easeOut",
+                          delay: index * 0.2,
+                        }}
+                      >
+                        <Link
+                          to={item.path}
+                          className="block text-gray-600 hover:text-gray-900 py-2 text-xl"
+                          onClick={toggleMenu}
+                        >
+                          {item.label}
+                        </Link>
+                      </motion.span>
+                    ))}
                   </nav>
                 </div>
               </SheetContent>
