@@ -1,6 +1,6 @@
-import ContactForm from "@/components/custom/contact_form";
-import Footer from "@/components/custom/footer";
-import Navbar from "@/components/custom/navbar";
+import Footer from "@/components/layout/footer";
+import Navbar from "@/components/layout/navbar";
+import ContactForm from "@/components/page_specific/contact/contact_form";
 import { Label } from "@/components/ui/label";
 import { useCursor } from "@/context/cursor.context";
 import React, { useEffect } from "react";

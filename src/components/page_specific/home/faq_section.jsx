@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import data from "../../constants/faq.json";
+import data from "../../../constants/faq.json";
 
 export default function FAQSection() {
   return (

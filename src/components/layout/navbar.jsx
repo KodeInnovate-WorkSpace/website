@@ -1,6 +1,6 @@
+import { useCursor } from "@/context/cursor.context";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCursor } from "@/context/cursor.context";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

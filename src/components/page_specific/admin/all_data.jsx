@@ -1,7 +1,8 @@
 import React from "react";
-import MyDataTable from "./datatable";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import useFetchData from "@/hooks/useFetchData";
+import MyDataTable from "./datatable";
+
 const AllData = () => {
   const { data: propertyData, loading: propertyLoading } =
     useFetchData("properties");

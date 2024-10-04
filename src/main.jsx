@@ -1,16 +1,16 @@
+import "./index.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./pages/home.page";
-import AboutPage from "./pages/about.page";
-import CareerPage from "./pages/career.page";
-import ContactPage from "./pages/contact.page";
-import PropertiesPage from "./pages/properties.page";
 import { CursorProvider } from "./context/cursor.context";
 import { FirebaseProvider } from "./context/firebase.context";
+import ScrollTopButton from "./components/common/scroll_to_top_button";
+import HomePage from "./pages/home.page";
+import AboutPage from "./pages/about.page";
+import PropertiesPage from "./pages/properties.page";
+import ContactPage from "./pages/contact.page";
+import CareerPage from "./pages/career.page";
 import AdminPage from "./pages/admin.page";
-import ScrollTopButton from "./components/custom/scroll_to_top_button";
 
 const router = createBrowserRouter([
   {

@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import Navbar from "@/components/custom/navbar";
-import HomeContent from "@/components/custom/home_content";
-import Footer from "@/components/custom/footer";
-import FAQSection from "@/components/custom/faq_section";
-import LocationCircle from "@/components/custom/location_circle";
-import FeaturedSection from "@/components/custom/featured_section";
+import Navbar from "@/components/layout/navbar";
+import HomeContent from "@/components/page_specific/home/home_content";
+import Footer from "@/components/layout/footer";
+import FAQSection from "@/components/page_specific/home/faq_section";
+import LocationCircle from "@/components/page_specific/home/location_circle";
+import FeaturedSection from "@/components/page_specific/home/featured_section";
 
 const HomePage = () => {
   const [locationCircleInView, setLocationCircleInView] = useState(false);

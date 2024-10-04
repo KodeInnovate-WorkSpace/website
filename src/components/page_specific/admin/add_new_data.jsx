@@ -1,12 +1,12 @@
 import React from "react";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Checkbox } from "../ui/checkbox";
 import useAddData from "@/hooks/useAddData";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),

@@ -1,9 +1,9 @@
-import React from "react";
-import { Form } from "../ui/form";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import { Label } from "../ui/label";
+import { Button } from "@/components/ui/button";
+import { Form } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { useCursor } from "@/context/cursor.context";
+import React from "react";
 
 const ContactForm = () => {
   const { blendMouseEnter, mouseLeave } = useCursor();

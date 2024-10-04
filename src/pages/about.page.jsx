@@ -1,5 +1,5 @@
-import Footer from "@/components/custom/footer";
-import Navbar from "@/components/custom/navbar";
+import Footer from "@/components/layout/footer";
+import Navbar from "@/components/layout/navbar";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 

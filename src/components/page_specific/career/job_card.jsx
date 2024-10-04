@@ -1,5 +1,5 @@
 import React from "react";
-import careerData from "../../constants/career.json";
+import careerData from "../../../constants/career.json";
 import { motion } from "framer-motion";
 import { useCursor } from "@/context/cursor.context";
 import useWhatsApp from "@/hooks/useWhatsApp";

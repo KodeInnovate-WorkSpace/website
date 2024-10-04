@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import data from "../../constants/data.json";
+import data from "../../../constants/data.json";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -13,7 +13,7 @@ const FeaturedSection = () => {
         </h1>
         <h3 className="text-center font-semibold text-gray-700 lg:text-xl">
           To get more information, please click on the images below.
-        </h3>   
+        </h3>
       </div>
 
       <div className="my-8 w-full">
@@ -37,7 +37,7 @@ const FeaturedSection = () => {
             1024: {
               slidesPerView: 4,
               spaceBetween: 30, // Adjust space for desktop
-              centeredSlides:false,
+              centeredSlides: false,
             },
           }}
         >
