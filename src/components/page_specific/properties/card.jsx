@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import useWhatsApp from "@/hooks/useWhatsApp";
+import { useCursor } from "@/context/cursor.context";
 
 export function MyCard({
   className,
@@ -20,6 +21,7 @@ export function MyCard({
   bedrooms,
   bathrooms,
   size,
+  tag,
   ...props
 }) {
   const contentText = [
@@ -48,10 +50,16 @@ export function MyCard({
     const sendWhatsAppMessage = useWhatsApp(message);
     sendWhatsAppMessage();
   };
+  const { blendMouseEnter, mouseLeave } = useCursor();
 
   return (
     <Card className={cn("w-[300px]", className)} {...props}>
       <CardHeader>
+        {/* tag */}
+        <div className="absolute bg-slate-700 text-white px-2 text-sm rounded-sm m-4">
+          <p>{tag}</p>
+        </div>
+
         {/* property image */}
         <div className=" w-full h-48 rounded-lg overflow-hidden cursor-pointer">
           <img
@@ -61,6 +69,7 @@ export function MyCard({
           />
         </div>
 
+{/* name & price */}
         <CardTitle>
           <div className="flex justify-between mt-4 text-lg">
             {name}
@@ -92,6 +101,8 @@ export function MyCard({
         <Button
           onClick={handleClick}
           className={`w-full h-12 text-lg bg-mainColor hover:bg-secondColor`}
+          onMouseEnter={blendMouseEnter}
+          onMouseLeave={mouseLeave}
         >
           Details
         </Button>

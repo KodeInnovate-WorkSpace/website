@@ -3,8 +3,18 @@ import { Navigation } from "swiper/modules";
 import data from "../../../constants/data.json";
 import "swiper/css";
 import "swiper/css/navigation";
+import useWhatsApp from "@/hooks/useWhatsApp";
 
 const FeaturedSection = () => {
+  const handleClick = (property) => {
+    const message = `I want further details about *${property.name.trim()}*, which is listed as *${
+      property.tag
+    }* property`;
+    const sendMessage = useWhatsApp(message);
+
+    sendMessage();
+  };
+
   return (
     <div className="container mx-auto flex flex-col items-center justify-center overflow-hidden py-5">
       <div>
@@ -52,6 +62,7 @@ const FeaturedSection = () => {
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                   }}
+                  onClick={() => handleClick(d)}
                 >
                   <div className="bg-slate-700 text-white px-2 text-sm rounded-sm">
                     <p>{d.tag}</p>

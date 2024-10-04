@@ -55,6 +55,7 @@ const LocationCircle = ({ isVisible }) => {
           onMouseLeave={mouseLeave}
           onClick={() => handleLocationClick(d.name.toLowerCase())}
         >
+
           <motion.div
             className="flex flex-col items-center space-y-2 w-1/2 lg:w-1/4 mb-4"
             variants={circleVariants}

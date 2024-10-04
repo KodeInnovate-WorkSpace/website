@@ -19,10 +19,11 @@ The `Deal Done Properties` Website is designed to provide a seamless experience 
 
 # Features
 
-- **Firebase Integration**: Admins can easily edit and add new properties
-- **Following Cursor**: Made a custom cursor follower, which changes dimentions on hover of certain items
-- **Animation**: Made animations using framer motion for better engagement
-- **Formik & Yup**: used formik and yup for form validation
+- **Firebase Integration**: Admins can easily edit and add new properties.
+- **Following Cursor**: Made a custom cursor follower, which changes dimentions on hover of certain items.
+- **Animation**: Made animations using framer motion for better engagement.
+- **Form Validation**: Integrated formik and yup for enhance form validation.
+- **UI**: shadcn for making consistent UI.
 
 # Technologies Used
 
@@ -32,6 +33,7 @@ The `Deal Done Properties` Website is designed to provide a seamless experience 
 - Framer Motion
 - Formik
 - Yup
+- ChatGPT
 
 # File Structure
 
@@ -76,7 +78,7 @@ src
 
 # Credentials Setup
 
-The credentials for WhatsApp number & Firebase Config `.env` file, which is not uploaded to GitHub for security reasons. Future developers need to create this file with the appropriate credentials.
+The credentials for WhatsApp number & Firebase Config `.env` file, which is not uploaded to GitHub for security reasons but are available on vercel. Future developers if needed a new .env need to create this file with the appropriate credentials and upload to vercel.
 
 1. Create the `.env` File
 

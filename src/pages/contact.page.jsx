@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { SlSocialYoutube } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
   const { mouseLeave, blendMouseEnter } = useCursor();
@@ -20,20 +21,26 @@ const ContactPage = () => {
       <div className="pt-[6rem] px-4 md:px-8">
         {/* Heading Section */}
         <div className="text-center mb-8">
-          <h1
+          <motion.h1
             onMouseEnter={blendMouseEnter}
             onMouseLeave={mouseLeave}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             className="text-3xl font-bold mb-2"
           >
             Contact Our Team
-          </h1>
-          <p
+          </motion.h1>
+          <motion.p
             className="text-lg"
             onMouseEnter={blendMouseEnter}
             onMouseLeave={mouseLeave}
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
           >
             Got any questions about our service? We're here to help.
-          </p>
+          </motion.p>
         </div>
 
         {/* Content Section */}

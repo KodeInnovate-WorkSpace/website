@@ -11,7 +11,7 @@ const HomePage = () => {
 
   useEffect(() => {
     //scroll to top on page load
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
     const handleScroll = () => {
       const locationCircleElement = document.getElementById("location-circle");
@@ -38,8 +38,14 @@ const HomePage = () => {
           <HomeContent />
         </div>
 
-        <div className="px-2 lg:px-10 mt-2">
+        <div className="px-2 lg:px-10">
           <FeaturedSection />
+        </div>
+
+        <div className="px-2 lg:px-10 mt-4">
+          <h1 className="text-center font-bold text-gray-800 text-xl lg:text-2xl -my-8">
+            Our Sites
+          </h1>
         </div>
 
         <div

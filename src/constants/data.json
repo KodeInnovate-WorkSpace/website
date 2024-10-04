@@ -9,7 +9,7 @@
     "bedrooms": 4,
     "size": "2300 sqft",
     "featured": true,
-    "tag": "New Project"
+    "tag": "Finished"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "bedrooms": 5,
     "size": "3500 sqft",
     "featured": true,
-    "tag": "New Project"
+    "tag": "In Development"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "bedrooms": 3,
     "size": "2000 sqft",
     "featured": false,
-    "tag": "New Project"
+    "tag": "Done"
   },
   {
     "id": 4,

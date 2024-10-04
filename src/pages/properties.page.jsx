@@ -41,6 +41,7 @@ const PropertiesPage = () => {
                 bedrooms={property.bedrooms}
                 bathrooms={property.bathrooms}
                 size={property.size}
+                tag={property.tag}
               />
             ))}
           </div>
@@ -63,6 +64,7 @@ const PropertiesPage = () => {
                 bedrooms={property.bedrooms}
                 bathrooms={property.bathrooms}
                 size={property.size}
+                tag={property.tag}
               />
             ))}
           </div>
