@@ -11,7 +11,7 @@ const HomePage = () => {
 
   useEffect(() => {
     //scroll to top on page load
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
     const handleScroll = () => {
       const locationCircleElement = document.getElementById("location-circle");
