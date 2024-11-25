@@ -4,11 +4,9 @@ const useWhatsApp = (message) => {
     message
   )}`;
 
-  const sendMessage = () => {
+  return () => {
     window.open(url, "_blank");
   };
-
-  return sendMessage;
 };
 
 export default useWhatsApp;

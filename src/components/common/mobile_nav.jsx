@@ -4,7 +4,7 @@ import {Link, useLocation} from "react-router-dom";
 import {useState, useEffect} from "react";
 
 const MobileNav = ({navItems}) => {
-    const [isOpen, setIsOpen] = useState(false)     ;
+    const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
     const [activePath, setActivePath] = useState("/");
 
@@ -38,8 +38,7 @@ const MobileNav = ({navItems}) => {
                         </svg>
                     </button>
                 </SheetTrigger>
-
-                    {/* Sheet Content (Mobile Sidebar) */}
+                {/* Sheet Content (Mobile Sidebar) */}
                 <SheetContent side="left">
                     <div className="flex flex-col h-full justify-between">
 
@@ -50,8 +49,6 @@ const MobileNav = ({navItems}) => {
                                 className="w-44 object-contain"
                             />
                         </div>
-
-
                         {/* Mobile Navigation Links */}
                         <nav className="-mt-64">
                             {navItems.map((item, index) => (

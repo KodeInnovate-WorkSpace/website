@@ -4,7 +4,12 @@
     "city": "Mumbai",
     "state": "Maharashtra",
     "salary": "6,00,000 - 8,00,000",
-    "skills": ["Client Relations", "Negotiation", "Market Analysis", "Sales"]
+    "skills": [
+      "Client Relations",
+      "Negotiation",
+      "Market Analysis",
+      "Sales"
+    ]
   },
   {
     "title": "Property Manager",
