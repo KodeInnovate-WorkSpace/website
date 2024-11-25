@@ -10,9 +10,9 @@ import {Button} from "@/components/ui/button";
 
 const AboutPage = () => {
     const {blendMouseEnter, mouseLeave} = useCursor();
-    // useEffect(() => {
-    //   window.scrollTo(0, 0);
-    // }, []);
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <Navbar/>
