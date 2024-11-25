@@ -13,7 +13,6 @@ import { useCursor } from "@/context/cursor.context";
 
 export function MyCard({
   className,
-  id,
   img,
   price,
   location,
@@ -69,13 +68,16 @@ export function MyCard({
           />
         </div>
 
-{/* name & price */}
+      {/* name & price */}
         <CardTitle>
           <div className="flex justify-between mt-4 text-lg">
-            {name}
-            <p>₹{price}/-</p>
+    <span className="truncate" title={name}>
+      {name}
+    </span>
+            <p className="text-[0.93rem]">₹{price}/-</p>
           </div>
         </CardTitle>
+
 
         <CardDescription>
           <p className="-mb-9">

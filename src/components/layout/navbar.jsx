@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md fixed w-full z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex-shrink-0 flex items-center md:order-none  mx-auto md:mx-0">
             <Link to="/">
               <div
                 onMouseEnter={blendMouseEnter}
@@ -28,7 +28,7 @@ const Navbar = () => {
                 <img
                   src="/images/logo_with_text.png"
                   alt="Logo"
-                  className="w-36 object-contain"
+                  className="w-44 object-contain "
                 />
               </div>
             </Link>
@@ -51,7 +51,6 @@ const Navbar = () => {
 
           {/* Mobile Menu (Hamburger) */}
           <MobileNav navItems={navItems}/>
-
         </div>
       </div>
     </nav>

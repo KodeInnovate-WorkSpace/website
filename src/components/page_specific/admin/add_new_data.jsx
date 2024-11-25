@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 
+const stringErrorText = "The entered text is not a number"
+
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
   image: Yup.string().required("Image is required"),
@@ -17,10 +19,11 @@ const validationSchema = Yup.object({
   size: Yup.string().required("Size is required"),
   bedrooms: Yup.number()
     .required("Number of Bedrooms is required")
-    .min(1, "At least 1 bedroom is required"),
+    .min(1, "At least 1 bedroom is required").typeError(stringErrorText),
   bathrooms: Yup.number()
     .required("Number of Bathrooms is required")
-    .min(1, "At least 1 bathroom is required"),
+    .min(1, "At least 1 bathroom is required")
+      .typeError(stringErrorText),
   featured: Yup.boolean(),
   tag: Yup.string().nullable(),
   collection: Yup.string().required("Collection Name is required"),

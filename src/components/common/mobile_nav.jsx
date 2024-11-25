@@ -53,7 +53,7 @@ const MobileNav = ({navItems}) => {
 
 
                         {/* Mobile Navigation Links */}
-                        <nav className="-mt-56">
+                        <nav className="-mt-64">
                             {navItems.map((item, index) => (
                                 <motion.span
                                     key={item.path}
