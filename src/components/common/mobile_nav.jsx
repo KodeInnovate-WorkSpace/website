@@ -47,7 +47,7 @@ const MobileNav = ({navItems}) => {
                             <img
                                 src="/images/logo_with_text.png"
                                 alt="Logo"
-                                className="w-40 object-contain"
+                                className="w-44 object-contain"
                             />
                         </div>
 
