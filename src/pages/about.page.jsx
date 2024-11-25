@@ -38,12 +38,7 @@ const AboutPage = () => {
               onMouseLeave={mouseLeave}
               className="text-gray-600 text-lg text-justify"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum eget arcu justo. Duis scelerisque elit et arcu
-              efficitur, et pretium tortor facilisis. Cras non orci at nisl
-              tempus fermentum. Sed sit amet mi interdum, gravida justo nec,
-              dapibus libero. Proin non consequat libero. Suspendisse potenti.
-              Aenean id erat vel ligula viverra vehicula.
+              DDP is India’s largest integrated platform for Real Estate & Mortgages and one of the fastest growing Proptech platform in Mumbai and UAE. DDP platform offers an integrated consumer experience & covers the full real-estate journey from search & discovery, transactions, home loans, interiors, rentals, property management and post-sales service.
             </p>
             <Link to={"/contact"}>
               <Button
@@ -128,9 +123,7 @@ const AboutPage = () => {
                     onMouseLeave={mouseLeave}
                     className="text-left font-semibold"
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iusto tenetur illo nihil facilis dolorem blanditiis eos
-                    harum fugit suscipit voluptate!
+                    To provide seamless experiences from search to post-sales service, making property transactions effortless.
                   </p>
                 </div>
               </div>
@@ -161,9 +154,7 @@ const AboutPage = () => {
                     onMouseLeave={mouseLeave}
                     className="text-left font-semibold"
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iusto tenetur illo nihil facilis dolorem blanditiis eos
-                    harum fugit suscipit voluptate!
+                    Revolutionizing real estate and mortgages with an integrated platform to simplify every step of the property journey.
                   </p>
                 </div>
               </div>

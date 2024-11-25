@@ -8,6 +8,7 @@ import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { SlSocialYoutube } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import {company_address, company_phone} from "@/constants/constants.js";
 
 const ContactPage = () => {
   const { mouseLeave, blendMouseEnter } = useCursor();
@@ -63,14 +64,14 @@ const ContactPage = () => {
               <div>
                 <h1 className="text-2xl font-bold">Call Us</h1>
                 <Label>Call our team for your queries</Label>
-                <h2>+91 8291492129</h2>
+                <h2>+91 {company_phone}</h2>
               </div>
 
               {/* Address Section */}
               <div>
                 <h1 className="text-2xl font-bold">Visit Us</h1>
                 <Label>Chat to us in person</Label>
-                <h2>Kalyan Phata Near HP Petrol Pump</h2>
+                <h2>{company_address}</h2>
               </div>
 
               {/* Social Media Section */}

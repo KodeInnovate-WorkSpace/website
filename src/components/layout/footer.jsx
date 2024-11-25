@@ -3,6 +3,7 @@ import { SlSocialYoutube } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import { useCursor } from "@/context/cursor.context";
 import featuredData from "../../constants/data.json";
+import {company_phone, company_address, company_email, developer_website} from "@/constants/constants.js";
 
 const Footer = () => {
   const { blendMouseEnter, mouseLeave } = useCursor();
@@ -39,14 +40,13 @@ const Footer = () => {
         <div onMouseEnter={blendMouseEnter} onMouseLeave={mouseLeave}>
           <h2 className="text-xl font-bold mb-4 text-white">Contact</h2>
           <p className="mb-2 text-white">
-            <span className="font-bold ">Address:</span> Kalyan Phata Near HP
-            Petrol Pump
+            <span className="font-bold ">Address:</span> {company_address}
           </p>
           <p className="mb-2 text-white">
-            <span className="font-bold">Phone:</span> +91 8291492129
+            <span className="font-bold">Phone:</span> +91 {company_phone}
           </p>
           <p className="mb-2 text-white">
-            <span className="font-bold">Email:</span> info@s1media.in
+            <span className="font-bold">Email:</span> {company_email}
           </p>
         </div>
 
@@ -84,7 +84,7 @@ const Footer = () => {
         onMouseLeave={mouseLeave}
         className="text-center mt-10 text-white text-sm lg:text-[1rem]"
       >
-        <a href="https://kodeinnovate.in/">
+        <a href={developer_website}>
           Powered by Kodeinnovate Solutions Private Limited
         </a>
       </div>

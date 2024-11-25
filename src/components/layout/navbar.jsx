@@ -1,15 +1,10 @@
 import { useCursor } from "@/context/cursor.context";
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { motion } from "framer-motion";
+import MobileNav from "@/components/common/mobile_nav.jsx";
+
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   const { blendMouseEnter, mouseLeave } = useCursor();
   const navItems = [
@@ -31,9 +26,9 @@ const Navbar = () => {
                 className="flex items-center"
               >
                 <img
-                  src="/images/logo.png"
+                  src="/images/logo_with_text.png"
                   alt="Logo"
-                  className="w-16 object-contain"
+                  className="w-36 object-contain"
                 />
               </div>
             </Link>
@@ -47,7 +42,7 @@ const Navbar = () => {
                 to={item.path}
                 onMouseEnter={blendMouseEnter}
                 onMouseLeave={mouseLeave}
-                className="text-gray-600 hover:text-gray-900 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-mainColor after:transition-all after:duration-300 hover:after:w-full"
+                className="text-gray-600 text-lg font-medium hover:text-gray-900 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-mainColor after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.label}
               </Link>
@@ -55,57 +50,8 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu (Hamburger) */}
-          <div className="flex md:hidden items-center">
-            <Sheet open={isOpen} onOpenChange={toggleMenu}>
-              <SheetTrigger asChild>
-                <button className="text-gray-800 focus:outline-none">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                </button>
-              </SheetTrigger>
+          <MobileNav navItems={navItems}/>
 
-              {/* Sheet Content (Mobile Sidebar) */}
-              <SheetContent side="left">
-                <div>
-                  {/* Mobile Navigation Links */}
-                  <nav className="mt-6">
-                    {navItems.map((item, index) => (
-                      <motion.span
-                        key={item.path}
-                        initial={{ x: -100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{
-                          duration: 0.5,
-                          ease: "easeOut",
-                          delay: index * 0.2,
-                        }}
-                      >
-                        <Link
-                          to={item.path}
-                          className="block text-gray-600 hover:text-gray-900 py-2 text-xl"
-                          onClick={toggleMenu}
-                        >
-                          {item.label}
-                        </Link>
-                      </motion.span>
-                    ))}
-                  </nav>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
         </div>
       </div>
     </nav>
