@@ -47,13 +47,13 @@ const MobileNav = ({navItems}) => {
                             <img
                                 src="/images/logo_with_text.png"
                                 alt="Logo"
-                                className="w-32 object-contain"
+                                className="w-40 object-contain"
                             />
                         </div>
 
 
                         {/* Mobile Navigation Links */}
-                        <nav className="-mt-52">
+                        <nav className="-mt-56">
                             {navItems.map((item, index) => (
                                 <motion.span
                                     key={item.path}
