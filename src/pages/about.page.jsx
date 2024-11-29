@@ -3,7 +3,7 @@ import Navbar from "@/components/layout/navbar";
 import {FaArrowRightLong} from "react-icons/fa6";
 import {motion} from "framer-motion";
 
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import {Link} from "react-router-dom";
 import {useCursor} from "@/context/cursor.context";
 import {Button} from "@/components/ui/button";
